@@ -1,0 +1,13 @@
+{
+  "type": "header",
+  "name": "EDNA header",
+  "sections": {
+    "header": {
+      "type": "edna-header",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

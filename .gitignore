@@ -1,0 +1,34 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+
+# Runtime data, dependencies and caches
+node_modules/
+.data/
+.wrangler/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+
+# Private working notes and browser/tool artifacts
+.agent/
+.agents/
+.codex/
+.playwright-cli/
+
+# Generated builds and audit artifacts. Source artwork is retained.
+output/*
+!output/imagegen/
+output/imagegen/*
+!output/imagegen/products/
+!output/imagegen/products/**
+
+# Redundant brand-kit archive; extracted source assets are versioned
+ASSETS/**/*.zip

@@ -1,0 +1,139 @@
+:root{--edna-ink:#211c19;--edna-stone:#6f6359;--edna-sand:#c8bba8;--edna-ivory:#faf7f1;--edna-paper:#eee7dd;--edna-olive:#484f41;--edna-rule:#d9cec0;--edna-display:Optima,Candara,"Segoe UI",sans-serif;--edna-body:Inter,"Helvetica Neue",Arial,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body.edna-storefront{background:var(--edna-ivory);color:var(--edna-ink)}
+.edna{font-family:var(--edna-body);font-size:14px;line-height:1.6;color:var(--edna-ink);letter-spacing:0}
+.edna *{box-sizing:border-box}
+.edna [hidden]{display:none!important}
+.edna h1,.edna h2,.edna h3,.edna p{margin:0}
+.edna h1,.edna h2,.edna h3{font-family:var(--edna-display);font-weight:400;letter-spacing:-.035em;line-height:1.1;text-wrap:balance}
+.edna h1{font-size:clamp(48px,6.3vw,100px)}
+.edna h2{font-size:clamp(34px,4vw,62px)}
+.edna a{color:inherit;text-decoration:none}
+.edna a:hover{text-decoration:none}
+.edna button,.edna input{font:inherit;color:inherit}
+.edna button{cursor:pointer}
+.edna button:focus-visible,.edna a:focus-visible,.edna input:focus-visible,.edna summary:focus-visible{outline:2px solid var(--edna-olive);outline-offset:5px}
+.edna img,.edna video{display:block;width:100%;height:100%;object-fit:cover}
+.edna svg{flex-shrink:0}
+.edna-eyebrow{font-size:10px;letter-spacing:.22em;line-height:1.6;text-transform:uppercase;font-weight:500}
+.edna-icon-button{min-width:44px;min-height:44px;padding:10px;background:none;border:0;border-radius:0;display:inline-flex;align-items:center;justify-content:center;color:inherit}
+.edna-icon-button svg{width:22px;height:22px}
+.edna-visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.edna-header{height:100px;padding:0 4vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:var(--edna-ivory);border-bottom:1px solid var(--edna-rule);position:relative;z-index:20}
+.edna-header-left,.edna-header-right{display:flex;align-items:center;gap:20px}
+.edna-header-right{justify-content:flex-end;gap:12px}
+.edna-header-label{font-size:11px;letter-spacing:.06em}
+.edna-logo{display:block;width:150px;height:54px}
+.edna-logo img{object-fit:contain}
+.edna summary{list-style:none;cursor:pointer}
+.edna summary::-webkit-details-marker{display:none}
+.edna-menu-panel,.edna-search-panel{position:absolute;top:100%;background:var(--edna-ivory);border:1px solid var(--edna-rule);box-shadow:0 16px 24px #211c190a}
+.edna-menu-panel{left:0;width:min(390px,100vw);padding:30px 4vw;display:flex;flex-direction:column;gap:22px}
+.edna-menu-panel a,.edna-text-button{font-size:16px}
+.edna-text-button{border:0;background:none;text-align:left;padding:0}
+.edna-search-panel{right:0;width:min(540px,100vw);padding:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.edna-search-panel label{width:100%;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.edna-search-panel input{min-width:0;flex:1;border:0;border-bottom:1px solid var(--edna-ink);background:none;padding:12px 0;outline-offset:4px}
+.edna-bag{position:relative}
+.edna-bag-count{font-size:9px;min-width:12px;margin-left:6px}
+.edna-campaign{display:grid;grid-template-columns:38% 62%;min-height:var(--campaign-height,72svh);background:var(--edna-paper);overflow:hidden}
+.edna-campaign-media{position:relative;min-height:var(--campaign-height,72svh);overflow:hidden;background:#a28f7c}
+.edna-board-crop{display:block;width:100%;height:100%;overflow:hidden}
+.edna-campaign-media>.edna-board-crop,.edna-campaign-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--campaign-focus,50% 50%)}
+.edna-campaign-media .edna-board-crop{view-transition-name:edna-campaign}
+.edna-campaign-caption{position:absolute;bottom:27px;left:30px;color:#fff9ef;font-size:9px;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 9px #211c19}
+.edna-campaign-copy{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:6vw 6vw 7vw;gap:28px}
+.edna-campaign-copy:after{content:"";position:absolute;right:-18vw;bottom:-27vw;width:40vw;height:40vw;border:1px solid #c8bba870;border-radius:50%;pointer-events:none}
+.edna-campaign-description{max-width:280px;color:var(--edna-stone);font-size:13px;line-height:1.8}
+.edna-button{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;padding:16px 21px;background:var(--edna-ink);color:var(--edna-ivory)!important;border:1px solid var(--edna-ink);min-height:52px;font-size:11px;letter-spacing:.04em;transition:background .2s}
+.edna-button:hover{background:var(--edna-olive)}
+.edna-button svg{width:19px}
+.edna-campaign-index{position:absolute;bottom:28px;right:30px;font-size:9px;letter-spacing:.2em;color:var(--edna-stone)}
+.edna-campaign-full{display:block;position:relative}
+.edna-campaign-full .edna-campaign-media{position:absolute;inset:0;min-height:0}
+.edna-campaign-full .edna-campaign-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#211c19b8,transparent)}
+.edna-campaign-full .edna-campaign-copy{position:relative;min-height:var(--campaign-height,72svh);width:65%;color:var(--edna-ivory)}
+.edna-campaign-full .edna-campaign-copy:after{display:none}
+.edna-campaign-full .edna-campaign-description,.edna-campaign-full .edna-campaign-index{color:var(--edna-ivory)}
+.edna-campaign-full .edna-campaign-caption{left:auto;right:30px}
+.edna-campaign-film{background:var(--edna-ink);padding:40px 12vw}
+.edna-campaign-film video{max-height:70svh;object-fit:contain}
+.edna-section{padding:90px 6vw}
+.edna-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:36px}
+.edna-section-heading h2{margin-top:14px}
+.edna-section-heading>p{font-size:12px;max-width:250px;line-height:1.8;color:var(--edna-stone)}
+.edna-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.edna-category{display:flex;flex-direction:column;position:relative;min-height:120px;background:var(--edna-paper);overflow:hidden}
+.edna-category>img{aspect-ratio:3/4;transition:transform .4s;height:auto}
+.edna-category:hover>img{transform:scale(1.025)}
+.edna-category>span{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 0 0;background:var(--edna-ivory);font-size:12px}
+.edna-category>span svg{width:18px}
+.edna-category-placeholder{justify-content:flex-end;min-height:270px;padding:24px;background:linear-gradient(160deg,#e9e3d8,#d1c5b4)}
+.edna-category-placeholder>span{background:none;padding:0;font-family:var(--edna-display);font-size:25px}
+.edna-category-placeholder small{font-size:10px;line-height:1.6;color:var(--edna-stone);margin-top:12px}
+.edna-link{display:inline-flex;gap:22px;align-items:center;font-size:11px;border-bottom:1px solid currentColor;padding-bottom:7px;line-height:1.5}
+.edna-link svg{width:19px}
+.edna-edit{padding-top:30px}
+.edna-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:50px 26px}
+.edna-product-media{position:relative;background:var(--edna-paper);aspect-ratio:4/5;overflow:hidden}
+.edna-product-media>a{display:block;height:100%;width:100%}
+.edna-product-image{transition:transform .45s}
+.edna-product:hover .edna-product-image{transform:scale(1.025)}
+.edna-save{position:absolute;right:14px;top:14px;background:var(--edna-ivory);border-radius:50%}
+.edna-save[aria-pressed=true] svg{fill:currentColor}
+.edna-no-image{display:grid;height:100%;place-content:center;font-size:11px;color:var(--edna-stone)}
+.edna-sold-out{position:absolute;left:16px;bottom:16px;background:var(--edna-ivory);padding:5px 10px;font-size:10px}
+.edna-product-caption{padding-top:18px;display:flex;justify-content:space-between;gap:15px;align-items:baseline}
+.edna-product-caption h3{font-family:var(--edna-body);font-size:13px;letter-spacing:0;line-height:1.5}
+.edna-product-caption>span{font-size:11px;color:var(--edna-stone);white-space:nowrap}
+.edna-signature{display:grid;grid-template-columns:60% 40%;background:var(--edna-paper)}
+.edna-signature-media{aspect-ratio:1;position:relative;overflow:hidden}
+.edna-signature-copy{padding:6vw;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:30px}
+.edna-signature-copy>p:not(.edna-eyebrow){color:var(--edna-stone);font-size:13px;line-height:1.9}
+.edna-signature-copy video{height:auto;max-height:280px}
+.edna-stories{padding-top:100px;padding-bottom:100px}
+.edna-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.edna-story-media{aspect-ratio:4/5;overflow:hidden;position:relative}
+.edna-story-media .edna-board-crop{position:absolute;inset:0}
+.edna-story-caption{padding:32px 32px 38px;background:var(--edna-paper);display:flex;flex-direction:column;align-items:flex-start;gap:17px}
+.edna-story-caption h3{font-size:clamp(28px,3vw,46px)}
+.edna-story-caption>p{font-size:12px;line-height:1.9;max-width:320px}
+.edna-story-dark .edna-story-caption{background:var(--edna-olive);color:var(--edna-ivory)}
+.edna-occasions{background:var(--edna-paper)}
+.edna-occasions .edna-category{border-bottom:1px solid var(--edna-stone);background:none}
+.edna-occasions .edna-category>span{background:none;padding:18px 0}
+.edna-confidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px}
+.edna-confidence figure{margin:0;background:var(--edna-paper);padding:30px}
+.edna-confidence figure img{aspect-ratio:4/5;margin-bottom:25px;height:auto}
+.edna-confidence blockquote{font-family:var(--edna-display);font-size:24px;line-height:1.5;margin:0 0 20px}
+.edna-confidence figcaption{font-size:11px;color:var(--edna-stone)}
+.edna-confidence details{align-self:start;border-bottom:1px solid var(--edna-rule)}
+.edna-confidence summary{display:flex;justify-content:space-between;padding:18px 0;font-size:14px}
+.edna-information-body{padding-bottom:20px;font-size:12px;line-height:1.9}
+.edna-information-body a,.edna-fine-print a{text-decoration:underline}
+.edna-editor-note{border:1px dashed var(--edna-stone);padding:25px;line-height:1.8;font-size:12px;color:var(--edna-stone)}
+.edna-footer{padding:0 6vw;background:var(--edna-paper)}
+.edna-newsletter{display:grid;grid-template-columns:1.1fr 1fr;gap:12vw;padding:70px 0;border-bottom:1px solid var(--edna-rule);align-items:center}
+.edna-newsletter h2{margin:16px 0;font-size:clamp(34px,4vw,58px)}
+.edna-newsletter>div>p:last-child{font-size:12px;line-height:1.9;max-width:360px;color:var(--edna-stone)}
+.edna-newsletter-form{width:100%}
+.edna-email-field{border-bottom:1px solid var(--edna-ink);display:flex;align-items:center}
+.edna-email-field input{border:0;min-width:0;flex:1;background:none;min-height:58px;border-radius:0;padding:12px 0;font-size:12px}
+.edna-email-field input::placeholder{color:var(--edna-stone);opacity:1}
+.edna-fine-print{font-size:10px;line-height:1.8;color:var(--edna-stone);margin-top:15px!important}
+.edna-footer-main{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;padding:65px 0}
+.edna-footer-brand img{width:200px;height:72px;object-fit:contain;object-position:left}
+.edna-footer-brand p{margin-top:20px;font-size:12px;color:var(--edna-stone)}
+.edna-footer-main nav{display:flex;gap:18px 36px;flex-wrap:wrap;max-width:55%;font-size:11px;padding-top:18px}
+.edna-footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--edna-rule);padding:24px 0;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--edna-stone)}
+.edna-wishlist{border:1px solid var(--edna-rule);background:var(--edna-ivory);padding:32px;width:min(520px,90vw);max-height:85svh;color:var(--edna-ink);margin:auto}
+.edna-wishlist::backdrop{background:#211c1966}
+.edna-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
+.edna-dialog-heading h2{font-size:32px}
+.edna-wishlist p{font-size:12px;line-height:1.9;color:var(--edna-stone)}
+.edna-wishlist ul{padding-left:20px}
+.edna-wishlist li{padding:10px 0}
+@media(min-width:1600px){.edna-campaign-copy{padding-left:8vw}.edna-section,.edna-footer{padding-left:max(6vw,calc((100vw - 1450px)/2));padding-right:max(6vw,calc((100vw - 1450px)/2))}}
+@media(max-width:989px){.edna-header{height:84px}.edna-logo{width:130px;height:47px}.edna-header-label{display:none}.edna-campaign{grid-template-columns:52% 48%}.edna-campaign-copy{padding:45px 6vw;gap:23px}.edna-campaign h1{font-size:clamp(44px,7vw,72px)}.edna-category-grid{gap:16px}.edna-section{padding:65px 5vw}.edna-product-caption{flex-direction:column;gap:5px}.edna-signature-copy{padding:5vw;gap:20px}.edna-story-caption{padding:24px}.edna-newsletter{gap:7vw}.edna-story-grid{gap:20px}}
+@media(max-width:749px){html{scroll-padding-top:76px}.edna-header{height:76px;padding:0 16px}.edna-header-right{gap:0}.edna-header-left{gap:0}.edna-logo{width:114px;height:42px}.edna-bag-count{margin-left:2px}.edna-icon-button{padding:10px;min-width:40px}.edna-campaign{display:block;position:relative;min-height:72svh;min-height:var(--campaign-height,72svh)}.edna-campaign-media{position:absolute;inset:0;min-height:0}.edna-campaign-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#211c19d9,transparent 75%)}.edna-campaign-media .edna-board-crop{object-position:center}.edna-campaign-caption{top:22px;bottom:auto;left:22px;font-size:8px}.edna-campaign-copy,.edna-campaign-full .edna-campaign-copy{position:relative;min-height:var(--campaign-height,72svh);justify-content:flex-end;padding:75px 25px 42px;width:100%;color:var(--edna-ivory);gap:20px}.edna-campaign-copy:after{display:none}.edna-campaign h1{font-size:56px;max-width:350px}.edna-campaign-description{color:var(--edna-ivory);font-size:12px;max-width:260px}.edna-campaign-index{bottom:18px;right:22px;color:var(--edna-ivory);font-size:8px}.edna-campaign-copy .edna-button{background:var(--edna-ivory);color:var(--edna-ink)!important;border-color:var(--edna-ivory);font-size:10px;min-height:48px;padding:12px 17px}.edna-section{padding:55px 20px}.edna-section-heading{gap:20px;margin-bottom:26px;align-items:flex-start;flex-direction:column}.edna-section-heading h2{margin-top:10px;font-size:37px}.edna-eyebrow{font-size:8px;letter-spacing:.19em}.edna-section-heading>p{font-size:11px}.edna-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px}.edna-category>span{font-size:11px;gap:5px}.edna-category-placeholder{min-height:220px;padding:16px}.edna-category-placeholder>span{font-size:23px}.edna-product-grid{gap:28px 12px}.edna-product-caption{padding-top:12px;gap:4px}.edna-product-caption h3{font-size:11px}.edna-product-caption>span{font-size:10px;white-space:normal}.edna-save{right:7px;top:7px;min-width:36px;min-height:36px;padding:8px}.edna-save svg{width:18px;height:18px}.edna-signature{grid-template-columns:1fr}.edna-signature-media{aspect-ratio:5/4}.edna-signature-copy{padding:42px 25px 50px;gap:22px}.edna-signature-copy h2{font-size:42px}.edna-story-grid{grid-template-columns:1fr;gap:30px}.edna-story-media{aspect-ratio:4/5}.edna-story-caption{padding:26px}.edna-story-caption h3{font-size:34px}.edna-confidence-grid{grid-template-columns:1fr}.edna-footer{padding:0 25px}.edna-newsletter{grid-template-columns:1fr;gap:30px;padding:55px 0}.edna-newsletter h2{font-size:40px}.edna-newsletter>div>p:last-child{font-size:11px}.edna-footer-main{flex-direction:column;padding:45px 0;gap:28px}.edna-footer-brand img{width:170px;height:62px}.edna-footer-main nav{max-width:100%;padding:0;font-size:10px}.edna-footer-bottom{flex-wrap:wrap;font-size:8px;gap:14px}.edna-footer-bottom>a{margin-left:auto}.edna-campaign-film{padding:25px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.edna *{animation:none!important;transition:none!important}}

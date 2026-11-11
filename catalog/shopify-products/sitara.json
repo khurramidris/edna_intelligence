@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662766362",
+  "title": "Sitara — Pearl-detail sandal",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Pearl-detail sandal",
+  "descriptionHtml": "<p>Sitara brings a restrained pearl-like flourish to slim ivory straps and a balanced, sculptural heel. A quieter interpretation of occasion dressing.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "occasion",
+    "wedding"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415817216282",
+      "title": "EU 36",
+      "sku": "EDNA-SITARA-EU36",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817249050",
+      "title": "EU 37",
+      "sku": "EDNA-SITARA-EU37",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817281818",
+      "title": "EU 38",
+      "sku": "EDNA-SITARA-EU38",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817314586",
+      "title": "EU 39",
+      "sku": "EDNA-SITARA-EU39",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817347354",
+      "title": "EU 40",
+      "sku": "EDNA-SITARA-EU40",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817380122",
+      "title": "EU 41",
+      "sku": "EDNA-SITARA-EU41",
+      "price": "16900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

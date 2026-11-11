@@ -1,0 +1,84 @@
+{
+  "unpublished": true,
+  "count": 13,
+  "collections": [
+    {
+      "id": "gid://shopify/Collection/528886497562",
+      "title": "Stilettos",
+      "handle": "edna-stilettos",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886530330",
+      "title": "Occasion",
+      "handle": "edna-occasion",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886563098",
+      "title": "Tradition",
+      "handle": "edna-traditional",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886595866",
+      "title": "Flats & Mules",
+      "handle": "edna-flats",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886628634",
+      "title": "Street & Sneakers",
+      "handle": "edna-street",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886661402",
+      "title": "Statement",
+      "handle": "edna-statement",
+      "products": 2
+    },
+    {
+      "id": "gid://shopify/Collection/528886694170",
+      "title": "The EDNA Edit",
+      "handle": "edna-edna-edit",
+      "products": 6
+    },
+    {
+      "id": "gid://shopify/Collection/528886726938",
+      "title": "The Quiet Edit",
+      "handle": "edna-quiet-edit",
+      "products": 8
+    },
+    {
+      "id": "gid://shopify/Collection/528886759706",
+      "title": "The Unexpected Edit",
+      "handle": "edna-unexpected-edit",
+      "products": 4
+    },
+    {
+      "id": "gid://shopify/Collection/528886792474",
+      "title": "Wedding Guest",
+      "handle": "edna-wedding",
+      "products": 6
+    },
+    {
+      "id": "gid://shopify/Collection/528886825242",
+      "title": "Everyday",
+      "handle": "edna-everyday",
+      "products": 5
+    },
+    {
+      "id": "gid://shopify/Collection/528886858010",
+      "title": "After Dark",
+      "handle": "edna-after-dark",
+      "products": 8
+    },
+    {
+      "id": "gid://shopify/Collection/528886890778",
+      "title": "Weekend",
+      "handle": "edna-weekend",
+      "products": 5
+    }
+  ]
+}

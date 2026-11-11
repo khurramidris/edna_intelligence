@@ -1,0 +1,302 @@
+[
+  {
+    "slug": "noor",
+    "name": "Noor",
+    "title": "Noor — Satin stiletto",
+    "type": "Satin stiletto",
+    "category": "stilettos",
+    "occasions": [
+      "wedding",
+      "after-dark"
+    ],
+    "proposed_price_pkr": 13900,
+    "short": "Ivory satin-look folds, a fine ankle strap and a delicate pointed silhouette.",
+    "description": "Noor is a study in quiet drama: a luminous pointed toe, a fine ankle strap and a clean, slender heel. A design direction for modern occasionwear.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-noor.jpg",
+    "image_original": "output/imagegen/products/noor.png"
+  },
+  {
+    "slug": "sable",
+    "name": "Sable",
+    "title": "Sable — Patent slingback",
+    "type": "Patent slingback",
+    "category": "stilettos",
+    "occasions": [
+      "after-dark",
+      "everyday"
+    ],
+    "proposed_price_pkr": 14900,
+    "short": "A sharp black slingback with a whisper of gold.",
+    "description": "Sable pairs a precise pointed toe with a glossy charcoal finish and an understated gold-tone buckle. A confident finishing note for tailoring or eveningwear.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-sable.jpg",
+    "image_original": "output/imagegen/products/sable.png"
+  },
+  {
+    "slug": "mehfil",
+    "name": "Mehfil",
+    "title": "Mehfil — Crystal evening sandal",
+    "type": "Crystal evening sandal",
+    "category": "occasion",
+    "occasions": [
+      "wedding",
+      "after-dark"
+    ],
+    "proposed_price_pkr": 18900,
+    "short": "Champagne latticework with a little evening light.",
+    "description": "Mehfil explores fine crystal-like lattice straps and a champagne finish. An evening silhouette conceived for celebration and modern Pakistani occasionwear.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-mehfil.jpg",
+    "image_original": "output/imagegen/products/mehfil.png"
+  },
+  {
+    "slug": "sitara",
+    "name": "Sitara",
+    "title": "Sitara — Pearl-detail sandal",
+    "type": "Pearl-detail sandal",
+    "category": "occasion",
+    "occasions": [
+      "wedding",
+      "after-dark"
+    ],
+    "proposed_price_pkr": 16900,
+    "short": "Ivory straps, pearl-like accents, a softer sculptural heel.",
+    "description": "Sitara brings a restrained pearl-like flourish to slim ivory straps and a balanced, sculptural heel. A quieter interpretation of occasion dressing.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-sitara.jpg",
+    "image_original": "output/imagegen/products/sitara.png"
+  },
+  {
+    "slug": "gul",
+    "name": "Gul",
+    "title": "Gul — Zari-inspired khussa",
+    "type": "Zari-inspired khussa",
+    "category": "traditional",
+    "occasions": [
+      "wedding",
+      "everyday"
+    ],
+    "proposed_price_pkr": 11900,
+    "short": "Botanical gold embroidery in a traditional pointed form.",
+    "description": "Gul reinterprets the Pakistani khussa with botanical zari-inspired embroidery, antique-gold tones and an expressive pointed toe. Tradition, seen through an EDNA lens.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-gul.jpg",
+    "image_original": "output/imagegen/products/gul.png"
+  },
+  {
+    "slug": "raqs",
+    "name": "Raqs",
+    "title": "Raqs — Mirrorwork khussa",
+    "type": "Mirrorwork khussa",
+    "category": "traditional",
+    "occasions": [
+      "wedding",
+      "weekend"
+    ],
+    "proposed_price_pkr": 12900,
+    "short": "Deep olive and tiny mirrored geometry.",
+    "description": "Raqs contrasts deep olive with miniature mirrorwork-inspired details and geometric embroidery. A traditional flat with a contemporary, independent point of view.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-raqs.jpg",
+    "image_original": "output/imagegen/products/raqs.png"
+  },
+  {
+    "slug": "forma",
+    "name": "Forma",
+    "title": "Forma — Sculptural mule",
+    "type": "Sculptural mule",
+    "category": "flats",
+    "occasions": [
+      "everyday",
+      "after-dark"
+    ],
+    "proposed_price_pkr": 13900,
+    "short": "Folded stone-toned straps and an architectural heel.",
+    "description": "Forma makes a statement through proportion: a softly squared toe, a folded upper and a curved heel with a gold-tone accent. An exercise in everyday sculpture.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-forma.jpg",
+    "image_original": "output/imagegen/products/forma.png"
+  },
+  {
+    "slug": "lina",
+    "name": "Lina",
+    "title": "Lina — Cap-toe ballet flat",
+    "type": "Cap-toe ballet flat",
+    "category": "flats",
+    "occasions": [
+      "everyday",
+      "weekend"
+    ],
+    "proposed_price_pkr": 9900,
+    "short": "Sand, charcoal and the smallest bow.",
+    "description": "Lina combines a sand-toned upper with a charcoal cap toe and a tiny bow. A considered everyday flat with a clean, easy-to-style profile.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-lina.jpg",
+    "image_original": "output/imagegen/products/lina.png"
+  },
+  {
+    "slug": "cypher",
+    "name": "Cypher",
+    "title": "Cypher — Sculpted sneaker",
+    "type": "Sculpted sneaker",
+    "category": "street",
+    "occasions": [
+      "everyday",
+      "weekend"
+    ],
+    "proposed_price_pkr": 17900,
+    "short": "Ivory, olive and a flash of lime.",
+    "description": "Cypher brings EDNA into the street: layered ivory and olive panels, a sculpted sole and a small lime accent. A confident sneaker concept for unexpected pairings.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-cypher.jpg",
+    "image_original": "output/imagegen/products/cypher.png"
+  },
+  {
+    "slug": "reverb",
+    "name": "Reverb",
+    "title": "Reverb — Utility high-top",
+    "type": "Utility high-top",
+    "category": "street",
+    "occasions": [
+      "weekend",
+      "after-dark"
+    ],
+    "proposed_price_pkr": 19900,
+    "short": "Charcoal volume with brushed-silver attitude.",
+    "description": "Reverb pushes volume with a substantial high-top shape, charcoal and silver-tone panels and a wide ankle strap. A bold design direction rooted in street style.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-reverb.jpg",
+    "image_original": "output/imagegen/products/reverb.png"
+  },
+  {
+    "slug": "orbit",
+    "name": "Orbit",
+    "title": "Orbit — Chrome sculptural heel",
+    "type": "Chrome sculptural heel",
+    "category": "statement",
+    "occasions": [
+      "after-dark",
+      "weekend"
+    ],
+    "proposed_price_pkr": 22900,
+    "short": "Reflective silver, a sculptural oval, a different point of view.",
+    "description": "Orbit turns the heel into an object of fascination. Reflective silver-tone straps meet an open oval heel in a sculptural evening concept made to start a conversation.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-orbit.jpg",
+    "image_original": "output/imagegen/products/orbit.png"
+  },
+  {
+    "slug": "fable",
+    "name": "Fable",
+    "title": "Fable — Feather platform",
+    "type": "Feather platform",
+    "category": "statement",
+    "occasions": [
+      "after-dark",
+      "wedding"
+    ],
+    "proposed_price_pkr": 24900,
+    "short": "Deep oxblood, a dramatic platform and a feather-like flourish.",
+    "description": "Fable is EDNA at its most expressive: a deep oxblood platform, a bold block heel and a theatrical feather-like toe detail. A statement concept for after-dark dressing.",
+    "status": "DRAFT",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_asset": "edna-fable.jpg",
+    "image_original": "output/imagegen/products/fable.png"
+  }
+]

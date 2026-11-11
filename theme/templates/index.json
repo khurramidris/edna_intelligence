@@ -1,0 +1,356 @@
+{
+  "sections": {
+    "campaign": {
+      "type": "edna-concept-campaign",
+      "settings": {}
+    },
+    "styles": {
+      "type": "edna-concept-shortcuts",
+      "settings": {},
+      "blocks": {
+        "stilettos": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Stilettos",
+            "filter": "stilettos",
+            "image_asset": "edna-noor.jpg"
+          }
+        },
+        "occasion": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Occasion",
+            "filter": "occasion",
+            "image_asset": "edna-mehfil.jpg"
+          }
+        },
+        "traditional": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Tradition",
+            "filter": "traditional",
+            "image_asset": "edna-gul.jpg"
+          }
+        },
+        "flats": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Flats & Mules",
+            "filter": "flats",
+            "image_asset": "edna-forma.jpg"
+          }
+        },
+        "street": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Street & Sneakers",
+            "filter": "street",
+            "image_asset": "edna-cypher.jpg"
+          }
+        },
+        "statement": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Statement",
+            "filter": "statement",
+            "image_asset": "edna-orbit.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "stilettos",
+        "occasion",
+        "traditional",
+        "flats",
+        "street",
+        "statement"
+      ]
+    },
+    "edit": {
+      "type": "edna-concept-catalog",
+      "settings": {
+        "initial_count": 6
+      },
+      "blocks": {
+        "noor": {
+          "type": "style",
+          "settings": {
+            "slug": "noor",
+            "title": "Noor",
+            "subtitle": "Satin stiletto",
+            "image_asset": "edna-noor.jpg",
+            "price": 13900,
+            "category": "stilettos",
+            "occasions": "wedding after-dark",
+            "edit": "quiet",
+            "description": "Noor is a study in quiet drama: a luminous pointed toe, a fine ankle strap and a clean, slender heel. A design direction for modern occasionwear."
+          }
+        },
+        "gul": {
+          "type": "style",
+          "settings": {
+            "slug": "gul",
+            "title": "Gul",
+            "subtitle": "Zari-inspired khussa",
+            "image_asset": "edna-gul.jpg",
+            "price": 11900,
+            "category": "traditional",
+            "occasions": "wedding everyday",
+            "edit": "quiet",
+            "description": "Gul reinterprets the Pakistani khussa with botanical zari-inspired embroidery, antique-gold tones and an expressive pointed toe. Tradition, seen through an EDNA lens."
+          }
+        },
+        "cypher": {
+          "type": "style",
+          "settings": {
+            "slug": "cypher",
+            "title": "Cypher",
+            "subtitle": "Sculpted sneaker",
+            "image_asset": "edna-cypher.jpg",
+            "price": 17900,
+            "category": "street",
+            "occasions": "everyday weekend",
+            "edit": "unexpected",
+            "description": "Cypher brings EDNA into the street: layered ivory and olive panels, a sculpted sole and a small lime accent. A confident sneaker concept for unexpected pairings."
+          }
+        },
+        "mehfil": {
+          "type": "style",
+          "settings": {
+            "slug": "mehfil",
+            "title": "Mehfil",
+            "subtitle": "Crystal evening sandal",
+            "image_asset": "edna-mehfil.jpg",
+            "price": 18900,
+            "category": "occasion",
+            "occasions": "wedding after-dark",
+            "edit": "quiet",
+            "description": "Mehfil explores fine crystal-like lattice straps and a champagne finish. An evening silhouette conceived for celebration and modern Pakistani occasionwear."
+          }
+        },
+        "forma": {
+          "type": "style",
+          "settings": {
+            "slug": "forma",
+            "title": "Forma",
+            "subtitle": "Sculptural mule",
+            "image_asset": "edna-forma.jpg",
+            "price": 13900,
+            "category": "flats",
+            "occasions": "everyday after-dark",
+            "edit": "quiet",
+            "description": "Forma makes a statement through proportion: a softly squared toe, a folded upper and a curved heel with a gold-tone accent. An exercise in everyday sculpture."
+          }
+        },
+        "orbit": {
+          "type": "style",
+          "settings": {
+            "slug": "orbit",
+            "title": "Orbit",
+            "subtitle": "Chrome sculptural heel",
+            "image_asset": "edna-orbit.jpg",
+            "price": 22900,
+            "category": "statement",
+            "occasions": "after-dark weekend",
+            "edit": "unexpected",
+            "description": "Orbit turns the heel into an object of fascination. Reflective silver-tone straps meet an open oval heel in a sculptural evening concept made to start a conversation."
+          }
+        },
+        "sable": {
+          "type": "style",
+          "settings": {
+            "slug": "sable",
+            "title": "Sable",
+            "subtitle": "Patent slingback",
+            "image_asset": "edna-sable.jpg",
+            "price": 14900,
+            "category": "stilettos",
+            "occasions": "after-dark everyday",
+            "edit": "quiet",
+            "description": "Sable pairs a precise pointed toe with a glossy charcoal finish and an understated gold-tone buckle. A confident finishing note for tailoring or eveningwear."
+          }
+        },
+        "sitara": {
+          "type": "style",
+          "settings": {
+            "slug": "sitara",
+            "title": "Sitara",
+            "subtitle": "Pearl-detail sandal",
+            "image_asset": "edna-sitara.jpg",
+            "price": 16900,
+            "category": "occasion",
+            "occasions": "wedding after-dark",
+            "edit": "quiet",
+            "description": "Sitara brings a restrained pearl-like flourish to slim ivory straps and a balanced, sculptural heel. A quieter interpretation of occasion dressing."
+          }
+        },
+        "raqs": {
+          "type": "style",
+          "settings": {
+            "slug": "raqs",
+            "title": "Raqs",
+            "subtitle": "Mirrorwork khussa",
+            "image_asset": "edna-raqs.jpg",
+            "price": 12900,
+            "category": "traditional",
+            "occasions": "wedding weekend",
+            "edit": "quiet",
+            "description": "Raqs contrasts deep olive with miniature mirrorwork-inspired details and geometric embroidery. A traditional flat with a contemporary, independent point of view."
+          }
+        },
+        "lina": {
+          "type": "style",
+          "settings": {
+            "slug": "lina",
+            "title": "Lina",
+            "subtitle": "Cap-toe ballet flat",
+            "image_asset": "edna-lina.jpg",
+            "price": 9900,
+            "category": "flats",
+            "occasions": "everyday weekend",
+            "edit": "quiet",
+            "description": "Lina combines a sand-toned upper with a charcoal cap toe and a tiny bow. A considered everyday flat with a clean, easy-to-style profile."
+          }
+        },
+        "reverb": {
+          "type": "style",
+          "settings": {
+            "slug": "reverb",
+            "title": "Reverb",
+            "subtitle": "Utility high-top",
+            "image_asset": "edna-reverb.jpg",
+            "price": 19900,
+            "category": "street",
+            "occasions": "weekend after-dark",
+            "edit": "unexpected",
+            "description": "Reverb pushes volume with a substantial high-top shape, charcoal and silver-tone panels and a wide ankle strap. A bold design direction rooted in street style."
+          }
+        },
+        "fable": {
+          "type": "style",
+          "settings": {
+            "slug": "fable",
+            "title": "Fable",
+            "subtitle": "Feather platform",
+            "image_asset": "edna-fable.jpg",
+            "price": 24900,
+            "category": "statement",
+            "occasions": "after-dark wedding",
+            "edit": "unexpected",
+            "description": "Fable is EDNA at its most expressive: a deep oxblood platform, a bold block heel and a theatrical feather-like toe detail. A statement concept for after-dark dressing."
+          }
+        }
+      },
+      "block_order": [
+        "noor",
+        "gul",
+        "cypher",
+        "mehfil",
+        "forma",
+        "orbit",
+        "sable",
+        "sitara",
+        "raqs",
+        "lina",
+        "reverb",
+        "fable"
+      ]
+    },
+    "signature": {
+      "type": "edna-concept-signature",
+      "settings": {}
+    },
+    "stories": {
+      "type": "edna-concept-stories",
+      "settings": {},
+      "blocks": {
+        "quiet": {
+          "type": "story",
+          "settings": {
+            "title": "The Quiet Edit",
+            "description": "Soft lines. Modern occasionwear. A quietly confident entrance.",
+            "image_asset": "edna-mobile-campaign.jpg",
+            "filter": "quiet",
+            "tone": "light"
+          }
+        },
+        "unexpected": {
+          "type": "story",
+          "settings": {
+            "title": "The Unexpected Edit",
+            "description": "Street silhouettes. Unexpected pairings. Follow your own instinct.",
+            "image_asset": "edna-street-editorial.jpg",
+            "filter": "unexpected",
+            "tone": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "quiet",
+        "unexpected"
+      ]
+    },
+    "occasions": {
+      "type": "edna-concept-shortcuts",
+      "settings": {
+        "eyebrow": "WHERE WILL YOU TAKE THEM?",
+        "heading": "Dress for the moment.",
+        "introduction": "Start with the occasion. Find your own way there.",
+        "occasion": true
+      },
+      "blocks": {
+        "wedding": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Wedding Guest",
+            "filter": "wedding",
+            "image_asset": "edna-sitara.jpg"
+          }
+        },
+        "everyday": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Everyday",
+            "filter": "everyday",
+            "image_asset": "edna-lina.jpg"
+          }
+        },
+        "after-dark": {
+          "type": "shortcut",
+          "settings": {
+            "title": "After Dark",
+            "filter": "after-dark",
+            "image_asset": "edna-fable.jpg"
+          }
+        },
+        "weekend": {
+          "type": "shortcut",
+          "settings": {
+            "title": "Weekend",
+            "filter": "weekend",
+            "image_asset": "edna-cypher.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "wedding",
+        "everyday",
+        "after-dark",
+        "weekend"
+      ]
+    },
+    "house": {
+      "type": "edna-house-note",
+      "settings": {}
+    }
+  },
+  "order": [
+    "campaign",
+    "styles",
+    "edit",
+    "signature",
+    "stories",
+    "occasions",
+    "house"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "count": 12,
+  "allDraft": true,
+  "allZeroStock": true,
+  "allSixVariants": true,
+  "imagesReady": 12,
+  "products": [
+    {
+      "id": "gid://shopify/Product/10515661357338",
+      "title": "Noor — Satin stiletto",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-noor.jpg?v=1794321233",
+      "proposedPrice": "13900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662635290",
+      "title": "Sable — Patent slingback",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-sable.jpg?v=1794321265",
+      "proposedPrice": "14900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662700826",
+      "title": "Mehfil — Crystal evening sandal",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-mehfil.jpg?v=1794321267",
+      "proposedPrice": "18900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662766362",
+      "title": "Sitara — Pearl-detail sandal",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-sitara.jpg?v=1794321270",
+      "proposedPrice": "16900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662831898",
+      "title": "Gul — Zari-inspired khussa",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-gul.jpg?v=1794321271",
+      "proposedPrice": "11900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662897434",
+      "title": "Raqs — Mirrorwork khussa",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-raqs.jpg?v=1794321273",
+      "proposedPrice": "12900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662962970",
+      "title": "Forma — Sculptural mule",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-forma.jpg?v=1794321275",
+      "proposedPrice": "13900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515662995738",
+      "title": "Lina — Cap-toe ballet flat",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-lina.jpg?v=1794321277",
+      "proposedPrice": "9900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515663061274",
+      "title": "Cypher — Sculpted sneaker",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-cypher.jpg?v=1794321280",
+      "proposedPrice": "17900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515663094042",
+      "title": "Reverb — Utility high-top",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-reverb.jpg?v=1794321282",
+      "proposedPrice": "19900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515663159578",
+      "title": "Orbit — Chrome sculptural heel",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-orbit.jpg?v=1794321284",
+      "proposedPrice": "22900.0"
+    },
+    {
+      "id": "gid://shopify/Product/10515663225114",
+      "title": "Fable — Feather platform",
+      "status": "DRAFT",
+      "stock": 0,
+      "variants": 6,
+      "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-fable.jpg?v=1794321286",
+      "proposedPrice": "24900.0"
+    }
+  ]
+}

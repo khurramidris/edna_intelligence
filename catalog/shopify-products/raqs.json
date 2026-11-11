@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662897434",
+  "title": "Raqs — Mirrorwork khussa",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Mirrorwork khussa",
+  "descriptionHtml": "<p>Raqs contrasts deep olive with miniature mirrorwork-inspired details and geometric embroidery. A traditional flat with a contemporary, independent point of view.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "edna-collection-study",
+    "edna-concept",
+    "traditional",
+    "wedding",
+    "weekend"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415818232090",
+      "title": "EU 36",
+      "sku": "EDNA-RAQS-EU36",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818264858",
+      "title": "EU 37",
+      "sku": "EDNA-RAQS-EU37",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818297626",
+      "title": "EU 38",
+      "sku": "EDNA-RAQS-EU38",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818330394",
+      "title": "EU 39",
+      "sku": "EDNA-RAQS-EU39",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818363162",
+      "title": "EU 40",
+      "sku": "EDNA-RAQS-EU40",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818395930",
+      "title": "EU 41",
+      "sku": "EDNA-RAQS-EU41",
+      "price": "12900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

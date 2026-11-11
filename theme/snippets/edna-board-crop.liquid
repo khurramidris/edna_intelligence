@@ -1,0 +1,20 @@
+{% doc %}
+  Displays a panel of the supplied EDNA identity board without altering its source artwork.
+  @param {string} panel - Campaign, packaging, detail, or evening panel
+  @param {string} label - Accessible description
+  @param {boolean} [priority] - Eagerly load the campaign panel
+{% enddoc %}
+{% liquid
+  assign crop = '0 0 427 597'
+  case panel
+    when 'packaging'
+      assign crop = '429 312 632 323'
+    when 'detail'
+      assign crop = '819 778 237 246'
+    when 'evening'
+      assign crop = '1058 778 231 246'
+  endcase
+%}
+<svg class="edna-board-crop" viewBox="{{ crop }}" preserveAspectRatio="{% if priority %}xMaxYMax slice{% else %}xMidYMid slice{% endif %}" role="img" aria-label="{{ label | escape }}">
+  <image href="{{ 'edna-identity-board.jpg' | asset_url }}" width="1535" height="1024" {% if priority %}fetchpriority="high"{% endif %}/>
+</svg>

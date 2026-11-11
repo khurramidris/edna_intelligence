@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515663061274",
+  "title": "Cypher — Sculpted sneaker",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Sculpted sneaker",
+  "descriptionHtml": "<p>Cypher brings EDNA into the street: layered ivory and olive panels, a sculpted sole and a small lime accent. A confident sneaker concept for unexpected pairings.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "edna-collection-study",
+    "edna-concept",
+    "everyday",
+    "street",
+    "weekend"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415819051290",
+      "title": "EU 36",
+      "sku": "EDNA-CYPHER-EU36",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819084058",
+      "title": "EU 37",
+      "sku": "EDNA-CYPHER-EU37",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819116826",
+      "title": "EU 38",
+      "sku": "EDNA-CYPHER-EU38",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819149594",
+      "title": "EU 39",
+      "sku": "EDNA-CYPHER-EU39",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819182362",
+      "title": "EU 40",
+      "sku": "EDNA-CYPHER-EU40",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819215130",
+      "title": "EU 41",
+      "sku": "EDNA-CYPHER-EU41",
+      "price": "17900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

@@ -1,0 +1,68 @@
+<section class="edna edna-section edna-new-shortcuts{% if section.settings.occasion %} edna-new-occasions{% endif %}">
+  <div class="edna-section-heading"><div><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2></div><p>{{ section.settings.introduction | escape }}</p></div>
+  <div class="edna-new-shortcut-grid">
+    {% for block in section.blocks %}<a href="#edna-edit" class="edna-new-shortcut" data-edna-collection-filter="{{ block.settings.filter | escape }}" {{ block.shopify_attributes }}>
+      <div><img src="{{ block.settings.image_asset | asset_url }}" width="1122" height="1402" alt="{{ block.settings.title | escape }} — {{ 'edna.collection.concept_image' | t }}" loading="lazy"></div><span>{{ block.settings.title | escape }}{% render 'edna-icon', name: 'arrow' %}</span>
+    </a>{% endfor %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "EDNA collection shortcuts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "A DIFFERENT MOOD. THE SAME POINT OF VIEW."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your form."
+    },
+    {
+      "type": "textarea",
+      "id": "introduction",
+      "label": "Introduction",
+      "default": "From a quiet entrance to an unexpected turn."
+    },
+    {
+      "type": "checkbox",
+      "id": "occasion",
+      "label": "Occasion layout",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "EDNA collection shortcuts"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "shortcut",
+      "name": "Collection shortcut",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "filter",
+          "label": "Collection filter"
+        },
+        {
+          "type": "text",
+          "id": "image_asset",
+          "label": "Theme image filename"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6
+}
+{% endschema %}

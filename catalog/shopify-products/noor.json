@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515661357338",
+  "title": "Noor — Satin stiletto",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Satin stiletto",
+  "descriptionHtml": "<p>Noor is a study in quiet drama: a luminous pointed toe, a fine ankle strap and a clean, slender heel. A design direction for modern occasionwear.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "stilettos",
+    "wedding"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415812235546",
+      "title": "EU 36",
+      "sku": "EDNA-NOOR-EU36",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415812268314",
+      "title": "EU 37",
+      "sku": "EDNA-NOOR-EU37",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415812301082",
+      "title": "EU 38",
+      "sku": "EDNA-NOOR-EU38",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415812333850",
+      "title": "EU 39",
+      "sku": "EDNA-NOOR-EU39",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415812366618",
+      "title": "EU 40",
+      "sku": "EDNA-NOOR-EU40",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415812399386",
+      "title": "EU 41",
+      "sku": "EDNA-NOOR-EU41",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

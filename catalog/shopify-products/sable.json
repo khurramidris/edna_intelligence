@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662635290",
+  "title": "Sable — Patent slingback",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Patent slingback",
+  "descriptionHtml": "<p>Sable pairs a precise pointed toe with a glossy charcoal finish and an understated gold-tone buckle. A confident finishing note for tailoring or eveningwear.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "everyday",
+    "stilettos"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415816757530",
+      "title": "EU 36",
+      "sku": "EDNA-SABLE-EU36",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415816790298",
+      "title": "EU 37",
+      "sku": "EDNA-SABLE-EU37",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415816823066",
+      "title": "EU 38",
+      "sku": "EDNA-SABLE-EU38",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415816855834",
+      "title": "EU 39",
+      "sku": "EDNA-SABLE-EU39",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415816888602",
+      "title": "EU 40",
+      "sku": "EDNA-SABLE-EU40",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415816921370",
+      "title": "EU 41",
+      "sku": "EDNA-SABLE-EU41",
+      "price": "14900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

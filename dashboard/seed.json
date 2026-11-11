@@ -1,0 +1,131 @@
+{
+  "data": {
+    "checkedAt": "2026-11-11",
+    "products": [
+      {
+        "status": "DRAFT",
+        "price": 1390000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-noor.jpg?v=1794321233",
+        "stock": 0,
+        "variants": 6,
+        "title": "Noor — Satin stiletto",
+        "id": "gid://shopify/Product/10515661357338"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1490000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-sable.jpg?v=1794321265",
+        "stock": 0,
+        "variants": 6,
+        "title": "Sable — Patent slingback",
+        "id": "gid://shopify/Product/10515662635290"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1890000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-mehfil.jpg?v=1794321267",
+        "stock": 0,
+        "variants": 6,
+        "title": "Mehfil — Crystal evening sandal",
+        "id": "gid://shopify/Product/10515662700826"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1690000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-sitara.jpg?v=1794321270",
+        "stock": 0,
+        "variants": 6,
+        "title": "Sitara — Pearl-detail sandal",
+        "id": "gid://shopify/Product/10515662766362"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1190000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-gul.jpg?v=1794321271",
+        "stock": 0,
+        "variants": 6,
+        "title": "Gul — Zari-inspired khussa",
+        "id": "gid://shopify/Product/10515662831898"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1290000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-raqs.jpg?v=1794321273",
+        "stock": 0,
+        "variants": 6,
+        "title": "Raqs — Mirrorwork khussa",
+        "id": "gid://shopify/Product/10515662897434"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1390000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-forma.jpg?v=1794321275",
+        "stock": 0,
+        "variants": 6,
+        "title": "Forma — Sculptural mule",
+        "id": "gid://shopify/Product/10515662962970"
+      },
+      {
+        "status": "DRAFT",
+        "price": 990000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-lina.jpg?v=1794321277",
+        "stock": 0,
+        "variants": 6,
+        "title": "Lina — Cap-toe ballet flat",
+        "id": "gid://shopify/Product/10515662995738"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1790000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-cypher.jpg?v=1794321280",
+        "stock": 0,
+        "variants": 6,
+        "title": "Cypher — Sculpted sneaker",
+        "id": "gid://shopify/Product/10515663061274"
+      },
+      {
+        "status": "DRAFT",
+        "price": 1990000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-reverb.jpg?v=1794321282",
+        "stock": 0,
+        "variants": 6,
+        "title": "Reverb — Utility high-top",
+        "id": "gid://shopify/Product/10515663094042"
+      },
+      {
+        "status": "DRAFT",
+        "price": 2290000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-orbit.jpg?v=1794321284",
+        "stock": 0,
+        "variants": 6,
+        "title": "Orbit — Chrome sculptural heel",
+        "id": "gid://shopify/Product/10515663159578"
+      },
+      {
+        "status": "DRAFT",
+        "price": 2490000,
+        "image": "https://cdn.shopify.com/s/files/1/1023/7902/8762/files/edna-fable.jpg?v=1794321286",
+        "stock": 0,
+        "variants": 6,
+        "title": "Fable — Feather platform",
+        "id": "gid://shopify/Product/10515663225114"
+      }
+    ],
+    "orders": [],
+    "costs": [],
+    "history": [],
+    "store": "wearedna.myshopify.com",
+    "analytics": {
+      "query": "FROM sessions SHOW sessions, online_store_visitors, sessions_with_cart_additions, sessions_that_reached_checkout, sessions_that_completed_checkout, conversion_rate SINCE -30d UNTIL today",
+      "sessions": 16,
+      "onlineStoreVisitors": 15,
+      "sessionsWithCartAdditions": 0,
+      "sessionsThatReachedCheckout": 0,
+      "sessionsThatCompletedCheckout": 0,
+      "conversionRate": 0,
+      "note": "Unfiltered 30-day baseline can include setup/test or bot traffic. It does not establish demand, paid/settled revenue or all-channel order count. Analytics response uses prior vrp8pp-z1.myshopify.com domain alias."
+    },
+    "catalogCheckedAt": "2026-11-10"
+  },
+  "revision": 0
+}

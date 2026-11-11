@@ -1,0 +1,84 @@
+{% assign catalog = collections['all'] %}
+<section class="edna edna-campaign{% if section.settings.full_bleed %} edna-campaign-full{% endif %}" style="--campaign-height: {{ section.settings.height }}svh; --campaign-focus: {{ section.settings.image.presentation.focal_point | default: '50% 50%' }};">
+  <div class="edna-campaign-media">
+    {% if section.settings.image %}
+      {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '640,960,1440,1920,2400', sizes: '100vw' }}
+    {% else %}{% assign campaign_label = 'edna.campaign.concept_alt' | t %}{% render 'edna-board-crop', panel: 'campaign', label: campaign_label, priority: true %}{% endif %}
+    <span class="edna-campaign-caption">{{ section.settings.caption | escape }}</span>
+  </div>
+  <div class="edna-campaign-copy">
+    <p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    <h1>{{ section.settings.heading | escape | newline_to_br }}</h1>
+    <p class="edna-campaign-description">{{ section.settings.description | escape }}</p>
+    {% if catalog.products_count > 0 %}<a class="edna-button" href="{{ section.settings.link | default: routes.all_products_collection_url }}">{{ 'edna.campaign.shop' | t }}{% render 'edna-icon', name: 'arrow' %}</a>{% else %}<a class="edna-button" href="#edna-newsletter">{{ 'edna.campaign.discover' | t }}{% render 'edna-icon', name: 'arrow' %}</a>{% endif %}
+    <span class="edna-campaign-index">01 / EDNA</span>
+  </div>
+</section>
+{% if section.settings.video != blank %}<div class="edna edna-campaign-film">{{ section.settings.video | video_tag: controls: true, muted: true, preload: 'none', image_size: '1200x' }}</div>{% endif %}
+{% schema %}
+{
+  "name": "EDNA campaign",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Campaign photograph"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Optional campaign film"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_bleed",
+      "label": "Full-width photograph",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Hero height",
+      "min": 65,
+      "max": 75,
+      "step": 1,
+      "unit": "vh",
+      "default": 72
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "EDNA / THE FIRST CHAPTER"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Headline",
+      "default": "For every\nside of you."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Introduction",
+      "default": "A quieter kind of statement. Footwear for the way you move through the world."
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Photograph caption",
+      "default": "EDNA \u2014 A STUDY IN CONTRAST"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "New arrivals collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "EDNA campaign"
+    }
+  ]
+}
+{% endschema %}

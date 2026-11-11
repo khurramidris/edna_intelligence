@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662700826",
+  "title": "Mehfil — Crystal evening sandal",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Crystal evening sandal",
+  "descriptionHtml": "<p>Mehfil explores fine crystal-like lattice straps and a champagne finish. An evening silhouette conceived for celebration and modern Pakistani occasionwear.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "occasion",
+    "wedding"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415816986906",
+      "title": "EU 36",
+      "sku": "EDNA-MEHFIL-EU36",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817019674",
+      "title": "EU 37",
+      "sku": "EDNA-MEHFIL-EU37",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817052442",
+      "title": "EU 38",
+      "sku": "EDNA-MEHFIL-EU38",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817085210",
+      "title": "EU 39",
+      "sku": "EDNA-MEHFIL-EU39",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817117978",
+      "title": "EU 40",
+      "sku": "EDNA-MEHFIL-EU40",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817150746",
+      "title": "EU 41",
+      "sku": "EDNA-MEHFIL-EU41",
+      "price": "18900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

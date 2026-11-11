@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515663159578",
+  "title": "Orbit — Chrome sculptural heel",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Chrome sculptural heel",
+  "descriptionHtml": "<p>Orbit turns the heel into an object of fascination. Reflective silver-tone straps meet an open oval heel in a sculptural evening concept made to start a conversation.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "statement",
+    "weekend"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415819510042",
+      "title": "EU 36",
+      "sku": "EDNA-ORBIT-EU36",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819542810",
+      "title": "EU 37",
+      "sku": "EDNA-ORBIT-EU37",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819575578",
+      "title": "EU 38",
+      "sku": "EDNA-ORBIT-EU38",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819608346",
+      "title": "EU 39",
+      "sku": "EDNA-ORBIT-EU39",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819641114",
+      "title": "EU 40",
+      "sku": "EDNA-ORBIT-EU40",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819673882",
+      "title": "EU 41",
+      "sku": "EDNA-ORBIT-EU41",
+      "price": "22900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

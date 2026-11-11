@@ -1,0 +1,16 @@
+{% doc %}
+  Renders a real product with a device-local wishlist control.
+  @param {product} item - Shopify product
+{% enddoc %}
+<article class="edna-product">
+  <div class="edna-product-media">
+    <a href="{{ item.url }}" aria-label="{{ item.title | escape }}">
+      {% if item.featured_image %}
+        {{ item.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320,480,640,900,1200', sizes: '(max-width: 749px) 46vw, 43vw', class: 'edna-product-image' }}
+      {% else %}<span class="edna-no-image">{{ 'edna.general.image_pending' | t }}</span>{% endif %}
+    </a>
+    <button type="button" class="edna-icon-button edna-save" data-edna-save data-product-url="{{ item.url }}" data-product-title="{{ item.title | escape }}" aria-label="{{ 'edna.wishlist.save' | t: title: item.title | escape }}" aria-pressed="false" hidden>{% render 'edna-icon', name: 'heart' %}</button>
+    {% unless item.available %}<span class="edna-sold-out">{{ 'edna.general.sold_out' | t }}</span>{% endunless %}
+  </div>
+  <div class="edna-product-caption"><h3><a href="{{ item.url }}">{{ item.title | escape }}</a></h3><span>{% if item.price_varies %}{{ 'edna.general.from' | t }} {% endif %}{{ item.price | money_with_currency }}</span></div>
+</article>

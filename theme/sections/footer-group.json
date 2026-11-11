@@ -1,0 +1,13 @@
+{
+  "type": "footer",
+  "name": "EDNA footer",
+  "sections": {
+    "footer": {
+      "type": "edna-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

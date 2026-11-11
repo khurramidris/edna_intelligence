@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {money,mergeImport,metrics} from '../domain.mjs';
+import {api} from '../api.mjs';
+const initial=()=>({products:[{id:'p1'}],costs:[],orders:[],history:[]});
+const order={id:'o1',date:'2026-11-11',status:'delivered',payment:'COD',total:'1000.10',collected:'600.10',refunded:'100.00',courierFee:null,source:'courier statement'};
+test('COD receivable and cash stay distinct; repeated import replaces cumulative values',()=>{let s=mergeImport(initial(),'orders',[order]);s=mergeImport(s,'orders',[order]);assert.equal(s.orders.length,1);assert.equal(metrics(s).codOutstanding,40000);assert.equal(metrics(s).netCash,50010);assert.equal(metrics(s).missingCourierFees,1);});
+test('Reject invalid precision, dates, duplicate IDs and unknown cost products atomically',()=>{assert.throws(()=>money('0.001'));assert.throws(()=>money(-2));assert.throws(()=>mergeImport(initial(),'orders',[order,order]));assert.throws(()=>mergeImport(initial(),'orders',[{...order,date:'2026-02-30'}]));assert.throws(()=>mergeImport(initial(),'costs',[{id:'unknown',unitCost:0,packaging:0}]));});
+test('Hosted data requires auth and rejects cross-origin mutation',async()=>{const storage={read:async()=>({data:initial(),revision:0})};assert.equal((await api(new Request('https://edna.example/api/state'),storage,{token:'secret'})).status,401);assert.equal((await api(new Request('https://edna.example/api/import/apply',{method:'POST',headers:{Authorization:'Bearer secret',Origin:'https://other.example'}}),storage,{token:'secret'})).status,403);});
+test('Stale preview cannot overwrite newer data',async()=>{let written=false;const storage={read:async()=>({data:initial(),revision:2}),write:()=>{written=true;}};const response=await api(new Request('http://localhost/api/import/apply',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind:'orders',rows:[order],revision:1})}),storage,{local:true});assert.equal(response.status,409);assert.equal(written,false);});

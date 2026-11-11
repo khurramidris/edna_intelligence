@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515663225114",
+  "title": "Fable — Feather platform",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Feather platform",
+  "descriptionHtml": "<p>Fable is EDNA at its most expressive: a deep oxblood platform, a bold block heel and a theatrical feather-like toe detail. A statement concept for after-dark dressing.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "statement",
+    "wedding"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415819706650",
+      "title": "EU 36",
+      "sku": "EDNA-FABLE-EU36",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819739418",
+      "title": "EU 37",
+      "sku": "EDNA-FABLE-EU37",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819772186",
+      "title": "EU 38",
+      "sku": "EDNA-FABLE-EU38",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819804954",
+      "title": "EU 39",
+      "sku": "EDNA-FABLE-EU39",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819837722",
+      "title": "EU 40",
+      "sku": "EDNA-FABLE-EU40",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819870490",
+      "title": "EU 41",
+      "sku": "EDNA-FABLE-EU41",
+      "price": "24900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662962970",
+  "title": "Forma — Sculptural mule",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Sculptural mule",
+  "descriptionHtml": "<p>Forma makes a statement through proportion: a softly squared toe, a folded upper and a curved heel with a gold-tone accent. An exercise in everyday sculpture.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "everyday",
+    "flats"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415818527002",
+      "title": "EU 36",
+      "sku": "EDNA-FORMA-EU36",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818559770",
+      "title": "EU 37",
+      "sku": "EDNA-FORMA-EU37",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818592538",
+      "title": "EU 38",
+      "sku": "EDNA-FORMA-EU38",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818625306",
+      "title": "EU 39",
+      "sku": "EDNA-FORMA-EU39",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818658074",
+      "title": "EU 40",
+      "sku": "EDNA-FORMA-EU40",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818690842",
+      "title": "EU 41",
+      "sku": "EDNA-FORMA-EU41",
+      "price": "13900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

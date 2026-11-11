@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662831898",
+  "title": "Gul — Zari-inspired khussa",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Zari-inspired khussa",
+  "descriptionHtml": "<p>Gul reinterprets the Pakistani khussa with botanical zari-inspired embroidery, antique-gold tones and an expressive pointed toe. Tradition, seen through an EDNA lens.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "edna-collection-study",
+    "edna-concept",
+    "everyday",
+    "traditional",
+    "wedding"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415817609498",
+      "title": "EU 36",
+      "sku": "EDNA-GUL-EU36",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817642266",
+      "title": "EU 37",
+      "sku": "EDNA-GUL-EU37",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817675034",
+      "title": "EU 38",
+      "sku": "EDNA-GUL-EU38",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817707802",
+      "title": "EU 39",
+      "sku": "EDNA-GUL-EU39",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817740570",
+      "title": "EU 40",
+      "sku": "EDNA-GUL-EU40",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415817773338",
+      "title": "EU 41",
+      "sku": "EDNA-GUL-EU41",
+      "price": "11900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

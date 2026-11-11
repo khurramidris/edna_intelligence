@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515662995738",
+  "title": "Lina — Cap-toe ballet flat",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Cap-toe ballet flat",
+  "descriptionHtml": "<p>Lina combines a sand-toned upper with a charcoal cap toe and a tiny bow. A considered everyday flat with a clean, easy-to-style profile.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "edna-collection-study",
+    "edna-concept",
+    "everyday",
+    "flats",
+    "weekend"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415818723610",
+      "title": "EU 36",
+      "sku": "EDNA-LINA-EU36",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818756378",
+      "title": "EU 37",
+      "sku": "EDNA-LINA-EU37",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818789146",
+      "title": "EU 38",
+      "sku": "EDNA-LINA-EU38",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818821914",
+      "title": "EU 39",
+      "sku": "EDNA-LINA-EU39",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818854682",
+      "title": "EU 40",
+      "sku": "EDNA-LINA-EU40",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415818887450",
+      "title": "EU 41",
+      "sku": "EDNA-LINA-EU41",
+      "price": "9900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}

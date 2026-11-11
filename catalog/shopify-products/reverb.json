@@ -1,0 +1,64 @@
+{
+  "id": "gid://shopify/Product/10515663094042",
+  "title": "Reverb — Utility high-top",
+  "vendor": "EDNA",
+  "status": "DRAFT",
+  "productType": "Utility high-top",
+  "descriptionHtml": "<p>Reverb pushes volume with a substantial high-top shape, charcoal and silver-tone panels and a wide ankle strap. A bold design direction rooted in street style.</p><p><strong>EDNA collection concept.</strong> AI-generated design image. Proposed price; final materials, fit, sizing and availability are to be confirmed. Not available to order.</p>",
+  "tags": [
+    "after-dark",
+    "edna-collection-study",
+    "edna-concept",
+    "street",
+    "weekend"
+  ],
+  "totalInventory": 0,
+  "featuredImageUrl": null,
+  "images": [],
+  "totalVariants": 6,
+  "variants": [
+    {
+      "id": "gid://shopify/ProductVariant/53415819247898",
+      "title": "EU 36",
+      "sku": "EDNA-REVERB-EU36",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819280666",
+      "title": "EU 37",
+      "sku": "EDNA-REVERB-EU37",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819313434",
+      "title": "EU 38",
+      "sku": "EDNA-REVERB-EU38",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819346202",
+      "title": "EU 39",
+      "sku": "EDNA-REVERB-EU39",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819378970",
+      "title": "EU 40",
+      "sku": "EDNA-REVERB-EU40",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53415819411738",
+      "title": "EU 41",
+      "sku": "EDNA-REVERB-EU41",
+      "price": "19900.00",
+      "inventoryQuantity": 0
+    }
+  ],
+  "currencyCode": "PKR"
+}
