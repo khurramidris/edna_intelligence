@@ -31,9 +31,8 @@
     {% endif %}
 
     {{ 'edna.css' | asset_url | stylesheet_tag }}
-    {{ 'edna-collection.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'edna-collection.js' | asset_url }}" defer></script>
     <script src="{{ 'edna.js' | asset_url }}" defer></script>
+    {%- render 'edna-structured-data' -%}
     {{ content_for_header }}
   </head>
 
@@ -51,7 +50,7 @@
         /**
          * Sets `--header-height` and `--header-group-height` to measured values before first paint.
          *
-         * A few CSS rules position content relative to the header at first paint â€” a hero sized to
+         * A few CSS rules position content relative to the header at first paint — a hero sized to
          * the remaining viewport, a transparent header's negative margin. Without a measured value
          * those rules use the `60px` fallback from `sections/header.liquid`, and the content visibly
          * jumps once `header.js` corrects the values after load.
@@ -61,7 +60,7 @@
          * which any new first-paint consumer must render too.
          *
          * Measures once per page; after load, header.js's ResizeObservers keep the values fresh.
-         * The group-height walk mimics calculateHeaderGroupHeight() in utilities.js â€” keep them
+         * The group-height walk mimics calculateHeaderGroupHeight() in utilities.js — keep them
          * in sync.
          */
         window.measureHeaderHeights = (function () {
@@ -87,7 +86,7 @@
              * A transparent header is absolutely positioned, so the loop above counts its section
              * wrapper as 0px. When a section follows it in the group, header.liquid pushes that
              * section down by the header's height using a margin, which offsetHeight also
-             * excludes â€” so the header's height has to be added back manually.
+             * excludes — so the header's height has to be added back manually.
              */
             if (header.hasAttribute('transparent') && header.parentElement?.nextElementSibling) {
               headerGroupHeight += headerHeight;
@@ -125,7 +124,7 @@
         /**
          * Sets `--transparent-header-offset-boolean` when the first section must offset itself
          * under a transparent header. The non-offset case relies on the `0` default declared in
-         * sections/header.liquid â€” unlike updateTransparentHeaderOffset() in utilities.js, which
+         * sections/header.liquid — unlike updateTransparentHeaderOffset() in utilities.js, which
          * re-runs on editor changes and must write '0' to reset a previously written '1'.
          */
         (function updateTransparentHeaderOffset() {

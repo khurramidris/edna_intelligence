@@ -26,9 +26,9 @@
   assign og_description = page_description | default: shop.description | default: shop.name
 
   if request.page_type == 'index'
-    assign og_title = 'EDNA — Footwear house'
+    assign og_title = 'EDNA — Footwear'
     assign edna_page_title = og_title
-    assign og_description = 'Sculpted for modern life. Discover the EDNA collection study, from quiet silhouettes to unexpected statement footwear.'
+    assign og_description = shop.description | default: 'EDNA footwear: statement heels, khussas, flats and sneakers, from quiet silhouettes to unexpected edges.'
   endif
 
   if request.page_type == 'product'
@@ -126,9 +126,16 @@
   href="{{ canonical_url }}"
 >
 
-{% if page_description %}
+{%- liquid
+  assign meta_description = page_description
+  if request.page_type == 'index'
+    assign meta_description = og_description
+  endif
+  assign meta_description = meta_description | default: og_description | strip_html | strip_newlines | truncate: 160
+-%}
+{% if meta_description != blank %}
   <meta
     name="description"
-    content="{{ page_description | escape }}"
+    content="{{ meta_description | escape }}"
   >
 {% endif %}

@@ -1,43 +1,54 @@
-{% assign signature = section.settings.product %}
-{% if signature != blank or request.design_mode %}
+{%- liquid
+  assign signature = section.settings.product
+  assign feature_image = section.settings.image | default: signature.featured_image
+  assign target_url = section.settings.link | default: signature.url
+-%}
+{%- if feature_image != blank or request.design_mode -%}
 <section class="edna edna-signature">
   <div class="edna-signature-media">
-    {% assign signature_image = section.settings.image | default: signature.featured_image %}
-    {% if signature_image %}{{ signature_image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '480,800,1200,1600', sizes: '(max-width: 749px) 100vw, 60vw' }}{% else %}{% assign detail_label = 'edna.signature.concept_alt' | t %}{% render 'edna-board-crop', panel: 'detail', label: detail_label %}{% endif %}
+    {%- if feature_image != blank -%}
+      {{- feature_image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '480,720,960,1200,1400', sizes: '(max-width: 749px) 100vw, 60vw', alt: feature_image.alt | default: section.settings.heading -}}
+    {%- endif -%}
   </div>
-  <div class="edna-signature-copy"><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.description | escape }}</p>
-    {% if signature != blank %}<a class="edna-link" href="{{ signature.url }}">{{ signature.title | escape }}{% render 'edna-icon', name: 'arrow' %}</a>{% elsif request.design_mode %}<p class="edna-editor-note">{{ 'edna.editor.signature' | t }}</p>{% endif %}
-    {% if section.settings.video %}{{ section.settings.video | video_tag: controls: true, muted: true, preload: 'none', image_size: '800x' }}{% endif %}
+  <div class="edna-signature-copy">
+    {%- if section.settings.eyebrow != blank -%}<p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h2>{{ section.settings.heading | escape | newline_to_br }}</h2>
+    {%- if section.settings.description != blank -%}<p>{{ section.settings.description | escape }}</p>{%- endif -%}
+    {%- if target_url != blank -%}
+      <a class="edna-link" href="{{ target_url }}">{{ section.settings.link_label | default: signature.title | escape }}{% render 'edna-icon', name: 'arrow' %}</a>
+    {%- endif -%}
+    {%- if section.settings.video -%}{{ section.settings.video | video_tag: controls: true, muted: true, preload: 'none', image_size: '800x' }}{%- endif -%}
   </div>
 </section>
-{% endif %}
+{%- endif -%}
 {% schema %}
 {
-  "name": "EDNA signature shoe",
+  "name": "EDNA feature",
   "settings": [
     {
       "type": "product",
       "id": "product",
-      "label": "Signature product"
+      "label": "Featured product",
+      "info": "Optional. Its photograph and link are used unless overridden below."
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Detail photograph"
+      "label": "Photograph"
     },
     {
       "type": "video",
       "id": "video",
-      "label": "On-foot film"
+      "label": "Film"
     },
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "THE DETAIL THAT CHANGES EVERYTHING"
+      "default": "A different point of view"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "heading",
       "label": "Headline",
       "default": "A moment,\nmade yours."
@@ -45,13 +56,23 @@
     {
       "type": "textarea",
       "id": "description",
-      "label": "Story",
-      "default": "An unexpected line. A considered silhouette. A pair that makes the whole look feel like you."
+      "label": "Story"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "info": "Leave empty to link to the featured product."
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
     }
   ],
   "presets": [
     {
-      "name": "EDNA signature shoe"
+      "name": "EDNA feature"
     }
   ]
 }

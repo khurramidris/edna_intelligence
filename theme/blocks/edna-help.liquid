@@ -1,0 +1,48 @@
+{%- liquid
+  assign digits = block.settings.whatsapp_number | remove: '+' | remove: ' ' | remove: '-' | remove: '(' | remove: ')'
+  assign product = closest.product
+  assign variant = product.selected_or_first_available_variant
+  assign message = block.settings.message | replace: '{product}', product.title
+  if variant.title != 'Default Title' and variant.title != blank
+    assign message = message | append: ' (' | append: variant.title | append: ')'
+  endif
+-%}
+{%- if digits != blank -%}
+  <p class="edna edna-help" {{ block.shopify_attributes }}>
+    <a class="edna-link" href="https://wa.me/{{ digits }}?text={{ message | url_encode }}" target="_blank" rel="noopener" data-edna-event="whatsapp_clicked" data-product-id="{{ product.id }}" data-variant-id="{{ variant.id }}">{{ block.settings.label | escape }}{% render 'edna-icon', name: 'arrow' %}</a>
+  </p>
+{%- elsif request.design_mode -%}
+  <p class="edna edna-editor-note" {{ block.shopify_attributes }}>Enter the WhatsApp Business number in this block's settings. It stays hidden on the storefront until you do.</p>
+{%- endif -%}
+{% schema %}
+{
+  "name": "EDNA WhatsApp help",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "whatsapp_number",
+      "label": "WhatsApp number",
+      "info": "International format, for example +92 300 0000000."
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Link label",
+      "default": "Ask about fit on WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Prefilled message",
+      "info": "Use {product} for the product name.",
+      "default": "Hello EDNA, I have a question about {product}."
+    }
+  ],
+  "presets": [
+    {
+      "name": "EDNA WhatsApp help"
+    }
+  ]
+}
+{% endschema %}

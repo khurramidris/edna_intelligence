@@ -1,3 +1,9 @@
+"""HISTORICAL. Do not run this script.
+
+The storefront theme is now edited directly (see docs/THEME_PLAN.md). Running this generator
+would overwrite hand-built sections, templates, the header, footer and layout with the earlier
+concept-collection versions.
+"""
 from pathlib import Path
 import json
 import re

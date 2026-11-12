@@ -1,44 +1,77 @@
-{% assign selected_collection = section.settings.collection %}
-{% if selected_collection.products_count > 0 or request.design_mode %}
+{%- liquid
+  assign selected_collection = section.settings.collection | default: collections['all']
+-%}
+{%- if selected_collection.products_count > 0 or request.design_mode -%}
 <section class="edna edna-section edna-edit" id="edna-edit">
-  <div class="edna-section-heading"><div><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2></div>{% if selected_collection.products_count > 0 %}<a class="edna-link" href="{{ selected_collection.url }}">{{ 'edna.general.view_collection' | t }}{% render 'edna-icon', name: 'arrow' %}</a>{% endif %}</div>
-  {% if selected_collection.products_count > 0 %}<div class="edna-product-grid">{% for item in selected_collection.products limit: section.settings.limit %}{% render 'edna-product-card', item: item %}{% endfor %}</div>{% else %}<p class="edna-editor-note">{{ 'edna.editor.products' | t }}</p>{% endif %}
+  <div class="edna-section-heading">
+    <div>
+      {%- if section.settings.eyebrow != blank -%}<p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2>{{ section.settings.heading | escape }}</h2>
+    </div>
+    {%- if section.settings.description != blank -%}<p>{{ section.settings.description | escape }}</p>{%- endif -%}
+  </div>
+  {%- if selected_collection.products_count > 0 -%}
+    <div class="edna-product-grid">
+      {%- for item in selected_collection.products limit: section.settings.limit -%}
+        {%- assign defer_card = false -%}
+        {%- if forloop.index > 4 -%}{%- assign defer_card = true -%}{%- endif -%}
+        {% render 'edna-product-card', item: item, defer: defer_card %}
+      {%- endfor -%}
+    </div>
+    {%- if selected_collection.products_count > section.settings.limit -%}
+      <p class="edna-edit-more"><a class="edna-link" href="{{ selected_collection.url }}">{{ section.settings.link_label | escape }}{% render 'edna-icon', name: 'arrow' %}</a></p>
+    {%- endif -%}
+  {%- else -%}
+    <p class="edna-editor-note">{{ 'edna.editor.products' | t }}</p>
+  {%- endif -%}
 </section>
-{% endif %}
+{%- endif -%}
 {% schema %}
 {
-  "name": "The EDNA Edit",
+  "name": "EDNA product grid",
   "settings": [
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "CONSIDERED. SELECTED. EDNA."
+      "default": "Considered. Selected. EDNA."
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "The EDNA Edit"
+      "default": "The collection"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Introduction"
     },
     {
       "type": "collection",
       "id": "collection",
-      "label": "Selected products"
+      "label": "Collection",
+      "info": "Leave empty to show all products."
     },
     {
       "type": "range",
       "id": "limit",
-      "label": "Number of products",
+      "label": "Products to show",
       "min": 4,
-      "max": 6,
-      "step": 1,
-      "default": 4
+      "max": 24,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label when more products exist",
+      "default": "Shop all styles"
     }
   ],
   "presets": [
     {
-      "name": "The EDNA Edit"
+      "name": "EDNA product grid"
     }
   ]
 }

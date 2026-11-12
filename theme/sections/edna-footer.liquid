@@ -1,3 +1,4 @@
+{%- assign footer_nav = section.settings.menu | default: linklists['footer'] -%}
 <footer class="edna edna-footer">
   <section class="edna-newsletter" id="edna-newsletter"><div><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.description | escape }}</p></div>
     {% form 'customer', id: 'EdnaNewsletter', class: 'edna-newsletter-form' %}
@@ -11,7 +12,7 @@
     {% endform %}
   </section>
   <div class="edna-footer-main"><div class="edna-footer-brand"><img src="{{ 'edna-footer-logo.svg' | asset_url }}" width="200" height="72" loading="lazy" alt="EDNA Footwear"><p>{{ section.settings.brand_line | escape }}</p></div>
-    <nav aria-label="{{ 'edna.general.footer' | t }}">{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}{% for policy in shop.policies %}{% if policy.body != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}{% if section.settings.instagram != blank %}<a href="{{ section.settings.instagram }}" target="_blank" rel="noopener">{{ 'edna.general.instagram' | t }} ↗</a>{% endif %}</nav>
+    <nav aria-label="{{ 'edna.general.footer' | t }}">{% for link in footer_nav.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}{% for policy in shop.policies %}{% if policy.body != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}{% if section.settings.instagram != blank %}<a href="{{ section.settings.instagram }}" target="_blank" rel="noopener">{{ 'edna.general.instagram' | t }} ↗</a>{% endif %}</nav>
   </div>
   <div class="edna-footer-bottom"><span>© {{ 'now' | date: '%Y' }} EDNA</span><span>{{ localization.country.name | escape }} / {{ localization.country.currency.iso_code }}</span><a href="#MainContent">{{ 'edna.general.back_top' | t }} ↑</a></div>
 </footer>

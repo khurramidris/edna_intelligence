@@ -1,0 +1,70 @@
+{% doc %}
+  Outputs JSON-LD that the Online Store does not already provide: the organization and website
+  on the homepage, and breadcrumbs on product and collection pages. Product data itself comes
+  from the product-information section.
+{% enddoc %}
+{%- liquid
+  assign site_url = shop.url
+  assign open_brace = '{'
+  assign close_brace = '}'
+  assign search_target = site_url | append: '/search?q=' | append: open_brace | append: 'search_term_string' | append: close_brace
+  assign crumb_collection = collection
+  if request.page_type == 'product'
+    assign crumb_collection = collection | default: product.collections.first
+  endif
+-%}
+{%- if request.page_type == 'index' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": {{ site_url | append: '/#organization' | json }},
+          "name": "EDNA",
+          "url": {{ site_url | json }},
+          "logo": {{ 'edna-apple-touch.png' | asset_url | prepend: 'https:' | json }}
+        },
+        {
+          "@type": "WebSite",
+          "@id": {{ site_url | append: '/#website' | json }},
+          "name": "EDNA",
+          "url": {{ site_url | json }},
+          "publisher": { "@id": {{ site_url | append: '/#organization' | json }} },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {{ search_target | json }},
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+  </script>
+{%- elsif request.page_type == 'product' and product != blank -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ site_url | json }} }
+        {%- if crumb_collection != blank -%}
+        , { "@type": "ListItem", "position": 2, "name": {{ crumb_collection.title | json }}, "item": {{ site_url | append: crumb_collection.url | json }} }
+        , { "@type": "ListItem", "position": 3, "name": {{ product.title | json }}, "item": {{ site_url | append: product.url | json }} }
+        {%- else -%}
+        , { "@type": "ListItem", "position": 2, "name": {{ product.title | json }}, "item": {{ site_url | append: product.url | json }} }
+        {%- endif -%}
+      ]
+    }
+  </script>
+{%- elsif request.page_type == 'collection' and collection != blank -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ site_url | json }} },
+        { "@type": "ListItem", "position": 2, "name": {{ collection.title | json }}, "item": {{ site_url | append: collection.url | json }} }
+      ]
+    }
+  </script>
+{%- endif -%}

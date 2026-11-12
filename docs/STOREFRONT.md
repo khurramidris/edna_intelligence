@@ -1,3 +1,5 @@
+> **Superseded on 12 November 2026.** This document describes the concept-collection preview. The storefront has since been rebuilt on real Shopify products (no concept cards, no pop-up dialogs, no "not available to order" copy). Current state: [THEME_PLAN.md](THEME_PLAN.md), [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md) and [THEME_BASELINE.md](THEME_BASELINE.md). The sections below are kept as history. The generator scripts named here are historical and must not be run.
+
 # EDNA — Collection preview
 
 A populated luxury footwear concept storefront, built on the existing Shopify Horizon theme with the supplied EDNA digital brand kit.

@@ -1,0 +1,55 @@
+{%- liquid
+  assign s = block.settings
+  assign has_line = false
+  if s.line_1 != blank or s.line_2 != blank or s.line_3 != blank
+    assign has_line = true
+  endif
+-%}
+{%- if has_line -%}
+  <ul class="edna edna-assurances" {{ block.shopify_attributes }}>
+    {%- for i in (1..3) -%}
+      {%- assign key = 'line_' | append: i -%}
+      {%- assign line = s[key] -%}
+      {%- if line != blank -%}
+        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>{{ line | escape }}</span></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+{%- elsif request.design_mode -%}
+  <p class="edna edna-editor-note" {{ block.shopify_attributes }}>Add delivery, exchange and payment lines in this block's settings. It stays hidden on the storefront until you do.</p>
+{%- endif -%}
+{% schema %}
+{
+  "name": "EDNA assurances",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Short confirmed statements"
+    },
+    {
+      "type": "text",
+      "id": "line_1",
+      "label": "Line 1",
+      "info": "For example the delivery promise. Only enter facts that are true."
+    },
+    {
+      "type": "text",
+      "id": "line_2",
+      "label": "Line 2",
+      "info": "For example the exchange terms."
+    },
+    {
+      "type": "text",
+      "id": "line_3",
+      "label": "Line 3",
+      "info": "For example the payment options."
+    }
+  ],
+  "presets": [
+    {
+      "name": "EDNA assurances"
+    }
+  ]
+}
+{% endschema %}

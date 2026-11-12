@@ -1,83 +1,97 @@
-{% assign catalog = collections['all'] %}
-<section class="edna edna-campaign{% if section.settings.full_bleed %} edna-campaign-full{% endif %}" style="--campaign-height: {{ section.settings.height }}svh; --campaign-focus: {{ section.settings.image.presentation.focal_point | default: '50% 50%' }};">
-  <div class="edna-campaign-media">
-    {% if section.settings.image %}
-      {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '640,960,1440,1920,2400', sizes: '100vw' }}
-    {% else %}{% assign campaign_label = 'edna.campaign.concept_alt' | t %}{% render 'edna-board-crop', panel: 'campaign', label: campaign_label, priority: true %}{% endif %}
-    <span class="edna-campaign-caption">{{ section.settings.caption | escape }}</span>
-  </div>
-  <div class="edna-campaign-copy">
-    <p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+{%- liquid
+  assign desktop_image = section.settings.image
+  assign mobile_image = section.settings.mobile_image | default: desktop_image
+  assign desktop_focus = desktop_image.presentation.focal_point | default: '50% 50%'
+  assign mobile_focus = mobile_image.presentation.focal_point | default: '50% 50%'
+-%}
+<section class="edna edna-hero" style="--hero-height: {{ section.settings.height }}svh; --hero-height-mobile: {{ section.settings.height_mobile }}svh; --hero-focus: {{ desktop_focus }}; --hero-focus-mobile: {{ mobile_focus }};">
+  {%- if desktop_image != blank -%}
+    <picture class="edna-hero-media">
+      {%- if mobile_image != blank -%}
+        <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 480 }} 480w, {{ mobile_image | image_url: width: 720 }} 720w, {{ mobile_image | image_url: width: 960 }} 960w" sizes="100vw" width="{{ mobile_image.width }}" height="{{ mobile_image.height }}">
+      {%- endif -%}
+      {{- desktop_image | image_url: width: 1600 | image_tag: widths: '800,1200,1600,2000', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'edna-hero-image' -}}
+    </picture>
+  {%- endif -%}
+  <div class="edna-hero-copy">
+    {%- if section.settings.eyebrow != blank -%}<p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
     <h1>{{ section.settings.heading | escape | newline_to_br }}</h1>
-    <p class="edna-campaign-description">{{ section.settings.description | escape }}</p>
-    {% if catalog.products_count > 0 %}<a class="edna-button" href="{{ section.settings.link | default: routes.all_products_collection_url }}">{{ 'edna.campaign.shop' | t }}{% render 'edna-icon', name: 'arrow' %}</a>{% else %}<a class="edna-button" href="#edna-newsletter">{{ 'edna.campaign.discover' | t }}{% render 'edna-icon', name: 'arrow' %}</a>{% endif %}
-    <span class="edna-campaign-index">01 / EDNA</span>
+    {%- if section.settings.description != blank -%}<p class="edna-hero-description">{{ section.settings.description | escape }}</p>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a class="edna-button" href="{{ section.settings.link | default: '#edna-edit' }}">{{ section.settings.button_label | escape }}{% render 'edna-icon', name: 'arrow' %}</a>
+    {%- endif -%}
   </div>
 </section>
-{% if section.settings.video != blank %}<div class="edna edna-campaign-film">{{ section.settings.video | video_tag: controls: true, muted: true, preload: 'none', image_size: '1200x' }}</div>{% endif %}
 {% schema %}
 {
-  "name": "EDNA campaign",
+  "name": "EDNA hero",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Campaign photograph"
+      "label": "Image (desktop)",
+      "info": "Wide image, about 1800 px across. The focal point set here is used."
     },
     {
-      "type": "video",
-      "id": "video",
-      "label": "Optional campaign film"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_bleed",
-      "label": "Full-width photograph",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "height",
-      "label": "Hero height",
-      "min": 65,
-      "max": 75,
-      "step": 1,
-      "unit": "vh",
-      "default": 72
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Image (phone)",
+      "info": "Portrait image. Falls back to the desktop image."
     },
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "EDNA / THE FIRST CHAPTER"
+      "default": "The first collection"
     },
     {
       "type": "textarea",
       "id": "heading",
       "label": "Headline",
-      "default": "For every\nside of you."
+      "default": "Every side\nof you."
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Introduction",
-      "default": "A quieter kind of statement. Footwear for the way you move through the world."
+      "default": "Quiet confidence. Unexpected edges. A world of footwear, through an EDNA lens."
     },
     {
       "type": "text",
-      "id": "caption",
-      "label": "Photograph caption",
-      "default": "EDNA \u2014 A STUDY IN CONTRAST"
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop the collection"
     },
     {
       "type": "url",
       "id": "link",
-      "label": "New arrivals collection"
+      "label": "Button link",
+      "info": "Leave empty to scroll to the product grid."
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Height (desktop)",
+      "min": 50,
+      "max": 90,
+      "step": 2,
+      "unit": "svh",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Height (phone)",
+      "min": 40,
+      "max": 80,
+      "step": 2,
+      "unit": "svh",
+      "default": 58
     }
   ],
   "presets": [
     {
-      "name": "EDNA campaign"
+      "name": "EDNA hero"
     }
   ]
 }

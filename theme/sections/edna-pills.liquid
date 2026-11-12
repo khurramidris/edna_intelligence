@@ -1,0 +1,77 @@
+{%- liquid
+  assign visible_count = 0
+  for block in section.blocks
+    if block.settings.collection != blank
+      assign visible_count = visible_count | plus: 1
+    endif
+  endfor
+-%}
+{%- if visible_count > 0 or request.design_mode -%}
+<section class="edna edna-section edna-pills-section{% if section.settings.tint %} edna-pills-tint{% endif %}">
+  <div class="edna-section-heading">
+    <div>
+      {%- if section.settings.eyebrow != blank -%}<p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2>{{ section.settings.heading | escape }}</h2>
+    </div>
+  </div>
+  <ul class="edna-pills">
+    {%- for block in section.blocks -%}
+      {%- assign chosen = block.settings.collection -%}
+      {%- if chosen != blank -%}
+        <li {{ block.shopify_attributes }}><a class="edna-pill" href="{{ chosen.url }}">{{ block.settings.label | default: chosen.title | escape }}<span class="edna-pill-count">{{ chosen.products_count }}</span></a></li>
+      {%- elsif request.design_mode -%}
+        <li {{ block.shopify_attributes }}><span class="edna-pill edna-pill-empty">{{ 'edna.editor.collection' | t }}</span></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "EDNA collection links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by style"
+    },
+    {
+      "type": "checkbox",
+      "id": "tint",
+      "label": "Tinted background",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Collection link",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "info": "Leave empty to use the collection name."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "EDNA collection links"
+    }
+  ]
+}
+{% endschema %}

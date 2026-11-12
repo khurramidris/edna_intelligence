@@ -1,0 +1,69 @@
+{%- liquid
+  assign product = closest.product
+  assign has_rows = false
+  assign mf = product.metafields.edna
+  if mf.material.value != blank or mf.lining.value != blank or mf.sole.value != blank or mf.heel_height.value != blank or mf.fit_note.value != blank or mf.care.value != blank
+    assign has_rows = true
+  endif
+-%}
+{%- if has_rows -%}
+  <dl class="edna edna-specs" {{ block.shopify_attributes }}>
+    {%- if mf.material.value != blank -%}<div><dt>{{ block.settings.label_material | escape }}</dt><dd>{{ mf.material.value | escape }}</dd></div>{%- endif -%}
+    {%- if mf.lining.value != blank -%}<div><dt>{{ block.settings.label_lining | escape }}</dt><dd>{{ mf.lining.value | escape }}</dd></div>{%- endif -%}
+    {%- if mf.sole.value != blank -%}<div><dt>{{ block.settings.label_sole | escape }}</dt><dd>{{ mf.sole.value | escape }}</dd></div>{%- endif -%}
+    {%- if mf.heel_height.value != blank -%}<div><dt>{{ block.settings.label_heel | escape }}</dt><dd>{{ mf.heel_height.value | escape }}</dd></div>{%- endif -%}
+    {%- if mf.fit_note.value != blank -%}<div><dt>{{ block.settings.label_fit | escape }}</dt><dd>{{ mf.fit_note.value | escape }}</dd></div>{%- endif -%}
+    {%- if mf.care.value != blank -%}<div><dt>{{ block.settings.label_care | escape }}</dt><dd>{{ mf.care.value | escape }}</dd></div>{%- endif -%}
+  </dl>
+{%- elsif request.design_mode -%}
+  <p class="edna edna-editor-note" {{ block.shopify_attributes }}>Fill in the EDNA product details (material, lining, sole, heel height, fit, care) on the product. Rows stay hidden until they have a value.</p>
+{%- endif -%}
+{% schema %}
+{
+  "name": "EDNA product details",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "label_material",
+      "label": "Material label",
+      "default": "Material"
+    },
+    {
+      "type": "text",
+      "id": "label_lining",
+      "label": "Lining label",
+      "default": "Lining"
+    },
+    {
+      "type": "text",
+      "id": "label_sole",
+      "label": "Sole label",
+      "default": "Sole"
+    },
+    {
+      "type": "text",
+      "id": "label_heel",
+      "label": "Heel height label",
+      "default": "Heel height"
+    },
+    {
+      "type": "text",
+      "id": "label_fit",
+      "label": "Fit label",
+      "default": "Fit"
+    },
+    {
+      "type": "text",
+      "id": "label_care",
+      "label": "Care label",
+      "default": "Care"
+    }
+  ],
+  "presets": [
+    {
+      "name": "EDNA product details"
+    }
+  ]
+}
+{% endschema %}

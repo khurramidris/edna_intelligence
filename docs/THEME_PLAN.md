@@ -37,6 +37,22 @@ Not checked: product pages (all products are drafts and return 404), the cart dr
 | Structured data (JSON-LD) | none | Organization, WebSite, Product, Breadcrumb |
 | Screens scrolled before the first product with a price | about 2 | under 1 |
 
+## Implementation status (12 November 2026)
+
+Built in the unpublished theme `EDNA — Build` (id 192900727066) and in the store. Details and owner actions: [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md). Measurements: [THEME_BASELINE.md](THEME_BASELINE.md). Events: [EVENTS.md](EVENTS.md).
+
+| Phase | Status |
+| --- | --- |
+| 0 Safe workspace | Done. Build theme created, generators marked historical. Browser access works. |
+| 1 Store and catalog | Done where the API allows: copy, alt text, tags, collection copy and handles, menus, activation and publishing. Not possible via API or needs owner facts: store name, price format, shipping rate, policies and pages, product facts, extra photos, stock (1.5 partly, 1.7, 1.8, 1.10 to 1.13, 1.15). |
+| 2 Real products | Done. Homepage rebuilt on real products, concept layer removed from the repo. Leftover files in the Build theme need deleting by the owner (assistants cannot delete theme files). |
+| 3 Product page | Done: gallery carousel, stock line, back-in-stock block, assurances, WhatsApp, details table. Blocks stay hidden until the owner supplies content. Size guide (3.4), quantity removal and accelerated checkout removal (3.11) not done. |
+| 4 Speed | Partly. Resized responsive images, deferred below-the-fold photos, one stylesheet, quick add off. Initial transfer down 39%; the throttled largest-paint time did not improve (see baseline). Not done: display font choice (Jost is a default), trimming Horizon scripts. |
+| 5 Ease of use | Done: type scale, tap targets, sticky header, real search and cart drawer, new homepage order, copy, brand consistency through theme settings. |
+| 6 SEO | Done: meta descriptions, structured data, breadcrumbs, real product links. Not done: keyword research, content pages, domain and Search Console (owner). |
+| 7 Measurement hooks | Done in code: custom events, ad-source cart attributes. Not exercised end to end until a product has stock. |
+| 8 Later | Not started, as planned. |
+
 ## Part 1. Findings
 
 ### A. Store setup blocks any sale (admin, not theme)

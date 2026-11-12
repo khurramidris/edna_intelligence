@@ -1,27 +1,52 @@
+{%- liquid
+  assign nav = section.settings.menu | default: linklists['main-menu']
+  assign cart_is_page = false
+  if template.name == 'cart' or settings.cart_type != 'drawer'
+    assign cart_is_page = true
+  endif
+-%}
+<script type="module" src="{{ 'cart-icon.js' | asset_url }}" fetchpriority="low"></script>
 <header class="edna edna-header">
   <div class="edna-header-left">
-    <details class="edna-menu">
+    <details class="edna-menu" data-edna-menu>
       <summary class="edna-icon-button" aria-label="{{ 'edna.general.menu' | t }}">{% render 'edna-icon', name: 'menu' %}</summary>
       <nav class="edna-menu-panel" aria-label="{{ 'edna.general.menu' | t }}">
-        {% if section.settings.menu != blank %}
-          {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}
-        {% else %}<a href="{{ routes.root_url }}">{{ 'edna.general.home' | t }}</a><a href="{{ routes.root_url }}#edna-edit">{{ 'edna.general.collection' | t }}</a>{% endif %}
-        <button type="button" class="edna-text-button" data-edna-wishlist hidden>{{ 'edna.wishlist.title' | t }}</button>
+        <ul>
+          {%- for link in nav.links -%}
+            <li>
+              {%- if link.links.size > 0 -%}
+                <p class="edna-menu-group">{{ link.title | escape }}</p>
+                <ul>
+                  {%- for child in link.links -%}
+                    <li><a href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              {%- else -%}
+                <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+          <li><button type="button" class="edna-text-button" data-edna-wishlist hidden>{{ 'edna.wishlist.title' | t }}</button></li>
+        </ul>
       </nav>
     </details>
-    <a class="edna-header-label" href="{{ routes.root_url }}#edna-edit">{{ 'edna.general.collection' | t }}</a>
   </div>
   <a class="edna-logo" href="{{ routes.root_url }}" aria-label="EDNA — {{ 'edna.general.home' | t }}">
     {% if section.settings.logo %}{{ section.settings.logo | image_url: width: 440 | image_tag: widths: '220,440', sizes: '150px', loading: 'eager', alt: 'EDNA Footwear' }}{% else %}<picture><source media="(max-width: 749px)" srcset="{{ 'edna-mobile-logo.svg' | asset_url }}"><img src="{{ 'edna-header-logo.svg' | asset_url }}" width="200" height="46" alt="EDNA Footwear"></picture>{% endif %}
   </a>
   <div class="edna-header-right">
-    <details class="edna-search">
-      <summary class="edna-icon-button" aria-label="{{ 'edna.general.search' | t }}">{% render 'edna-icon', name: 'search' %}</summary>
-      <form action="{{ routes.search_url }}" method="get" role="search" class="edna-search-panel">
-        <label for="EdnaSearch">{{ 'edna.general.search' | t }}</label><input id="EdnaSearch" type="search" name="q" required autocomplete="off"><input type="hidden" name="type" value="product"><button type="submit" class="edna-icon-button" aria-label="{{ 'edna.general.search' | t }}">{% render 'edna-icon', name: 'arrow' %}</button>
-      </form>
-    </details>
-    <a class="edna-icon-button edna-bag" href="{{ routes.cart_url }}" aria-label="{{ 'edna.general.bag' | t }}">{% render 'edna-icon', name: 'bag' %}<span class="edna-bag-count">{{ cart.item_count }}</span></a>
+    <button type="button" class="edna-icon-button" on:click="#search-modal/showDialog" aria-haspopup="dialog" aria-label="{{ 'edna.general.search' | t }}">{% render 'edna-icon', name: 'search' %}</button>
+    {%- capture bag_icon -%}
+      <cart-icon class="header-actions__cart-icon edna-cart-icon" data-testid="cart-icon">
+        {% render 'edna-icon', name: 'bag' %}
+        {% render 'cart-bubble', limit: 100 %}
+      </cart-icon>
+    {%- endcapture -%}
+    {%- if cart_is_page -%}
+      <a class="edna-icon-button edna-bag" href="{{ routes.cart_url }}" aria-label="{{ 'edna.general.bag' | t }}" aria-describedby="cart-bubble-text">{{ bag_icon }}</a>
+    {%- else -%}
+      <button type="button" class="edna-icon-button edna-bag" on:click="#cart-drawer/toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cart-drawer" aria-label="{{ 'edna.general.bag' | t }}" aria-describedby="cart-bubble-text" data-testid="cart-drawer-trigger">{{ bag_icon }}</button>
+    {%- endif -%}
   </div>
 </header>
 <dialog class="edna edna-wishlist" data-edna-wishlist-dialog>
@@ -41,7 +66,8 @@
     {
       "type": "link_list",
       "id": "menu",
-      "label": "Navigation menu"
+      "label": "Navigation menu",
+      "info": "Leave empty to use the main menu."
     }
   ],
   "presets": [
