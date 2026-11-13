@@ -1,4 +1,4 @@
-<section class="edna edna-house-note"><img class="edna-house-pattern" src="{{ 'edna-pattern-ivory.svg' | asset_url }}" width="1600" height="1600" loading="lazy" alt=""><div><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.description | escape }}</p><a href="#edna-newsletter" class="edna-link">{{ 'edna.collection.follow_story' | t }}{% render 'edna-icon', name: 'arrow' %}</a></div><img class="edna-house-emblem" src="{{ 'edna-favicon.svg' | asset_url }}" width="180" height="180" loading="lazy" alt="{{ 'edna.collection.monogram_alt' | t }}"></section>
+<section class="edna edna-house-note"><img class="edna-house-pattern" src="{{ 'edna-pattern-ivory.svg' | asset_url }}" width="1600" height="1600" loading="lazy" alt=""><div><p class="edna-eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.description | escape }}</p><a href="#edna-newsletter" class="edna-link">{{ 'edna.collection.follow_story' | t }}{% render 'edna-icon', name: 'arrow' %}</a></div><img class="edna-house-emblem" src="{{ 'edna-monogram.svg' | asset_url }}" width="180" height="180" loading="lazy" alt="{{ 'edna.collection.monogram_alt' | t }}"></section>
 {% schema %}
 {
   "name": "EDNA house signature",
@@ -19,7 +19,7 @@
       "type": "textarea",
       "id": "description",
       "label": "Story",
-      "default": "A considered silhouette. An unexpected detail. A way of dressing that leaves room for every side of you. This is the first EDNA collection study."
+      "default": "A considered silhouette. An unexpected detail. A way of dressing that leaves room for every side of you."
     }
   ],
   "presets": [

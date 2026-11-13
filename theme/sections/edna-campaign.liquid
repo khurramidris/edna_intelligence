@@ -8,7 +8,7 @@
   {%- if desktop_image != blank -%}
     <picture class="edna-hero-media">
       {%- if mobile_image != blank -%}
-        <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 480 }} 480w, {{ mobile_image | image_url: width: 720 }} 720w, {{ mobile_image | image_url: width: 960 }} 960w" sizes="100vw" width="{{ mobile_image.width }}" height="{{ mobile_image.height }}">
+        <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 480 }} 480w, {{ mobile_image | image_url: width: 640 }} 640w, {{ mobile_image | image_url: width: 800 }} 800w, {{ mobile_image | image_url: width: 960 }} 960w" sizes="72vw" width="{{ mobile_image.width }}" height="{{ mobile_image.height }}">
       {%- endif -%}
       {{- desktop_image | image_url: width: 1600 | image_tag: widths: '800,1200,1600,2000', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'edna-hero-image' -}}
     </picture>

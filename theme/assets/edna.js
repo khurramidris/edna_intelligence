@@ -98,6 +98,13 @@
     if (event.target.closest?.('[data-edna-notify]')) publish('notify_requested', {});
   });
 
+  // Product gallery: report a photo only when the shopper chose it (swipe, drag or thumbnail), not on load.
+  document.addEventListener('slideshow:select', (event) => {
+    const detail = event.detail;
+    if (!detail || !detail.userInitiated || !event.target.closest?.('media-gallery')) return;
+    publish('gallery_image_viewed', { productId: event.target.closest('[data-product-id]')?.dataset.productId, index: detail.index });
+  });
+
   /* ---------- Ad source on every order ---------- */
   // Campaign parameters are kept for the session and written to the cart as attributes
   // when the first item is added, so each order records where it came from.

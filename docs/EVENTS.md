@@ -14,12 +14,13 @@ Source: `theme/assets/edna.js`.
 | `edna:whatsapp_clicked` | A WhatsApp link (help block or back-in-stock block) is clicked | `productId`, `variantId` |
 | `edna:wishlist_added` | The heart on a product card is switched on | `productId` |
 | `edna:wishlist_removed` | The heart is switched off | `productId` |
+| `edna:gallery_image_viewed` | A shopper swipes, drags or taps to another product photo (not on page load) | `productId`, `index` |
 
 IDs are Shopify numeric product and variant IDs, not GIDs.
 
 ## Not built yet
 
-`size_guide_opened` (there is no size guide page yet), `gallery_image_viewed` and `spec_opened` (little to measure while each product has one image).
+`size_guide_opened` (there is no size guide page yet) and `spec_opened`. `gallery_image_viewed` is wired but cannot be exercised until products have more than one photo.
 
 ## Ad source on every order
 

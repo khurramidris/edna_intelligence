@@ -21,13 +21,13 @@ Shopify's own checkout prefetch (about 500 KB) is **included** here because it c
 
 | Measure | Before | After |
 | --- | --- | --- |
-| First Contentful Paint | 1.4 s | 1.1–1.5 s |
-| Largest Contentful Paint (hero image) | 3.7 s | 3.5–3.9 s |
-| Full load | 9.4 s | 7.5–8.7 s |
+| First Contentful Paint | 1.4 s | 1.1–1.4 s |
+| Largest Contentful Paint (hero image) | 3.7 s | 3.3–3.6 s |
+| Full load | 9.4 s | 7.4 s |
 | Requests before scroll | 138 | 135–137 |
 | Layout shift | 0 | 0.004 |
 
-**The largest paint did not improve.** The hero is still 147 KB and takes about 2.8 s to arrive because the emulated connection is shared with about 80 script requests, three fonts and the first four product photographs. Ideas not yet tried: serve a smaller phone hero (a 720 px source instead of 960 px saves about 30%), and preload the hero image from the layout once its URL can be known there.
+**The largest paint improved only slightly, and the 2.5 s target is not met in this test.** The phone hero is now 118 KB (it was 147 KB; the phone source is chosen at 800 px for a 2.75× screen) but it still takes about 2.5 s to arrive because the emulated connection is shared equally between about 80 script requests, three fonts and the first four product photographs. A real browser prioritises the hero, so a phone on mobile data may do better, but that is unmeasured. Ideas not yet tried: preloading the hero from the layout, and trimming Horizon's script set.
 
 ## Checks that are not timing-based
 

@@ -163,6 +163,7 @@ body.edna-storefront #header-group{position:sticky;top:0;z-index:30}
 .edna-specs div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--edna-rule)}
 .edna-specs dt{color:var(--edna-stone)}
 .edna-specs dd{margin:0}
+@media(max-width:749px){body.edna-storefront .product-form-buttons quantity-selector-component{display:none}}
 
 @media(hover:hover){.edna-product:hover .edna-product-image-alt{opacity:1}.edna-product:hover .edna-product-image{transform:scale(1.025)}}
 

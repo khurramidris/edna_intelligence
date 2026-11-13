@@ -48,5 +48,7 @@ Google & YouTube (GA4), Facebook & Instagram (Meta pixel and server-side events)
 
 - With zero stock every product shows "Sold out", on cards, collection pages and product pages. That is accurate but looks flat until stock is entered.
 - Ad-source attribution (`edna_*` cart attributes) and the back-in-stock tags have been built but not exercised end to end, because nothing can be added to a cart without stock. The back-in-stock panel itself was tested in a browser (shows for sold-out sizes, heading and tags follow the chosen size). The form was not submitted, to avoid creating a customer record.
-- Dead strings remain in `theme/locales/en.default.json` (`edna.collection.*` and a few others that mention "study" and "AI-generated"). Nothing renders them. Remove them next time that file is edited.
+- Unused EDNA strings ("study", "AI-generated", "not available to order") have been removed from the locale file. The theme shows no "translation missing" text on the pages checked.
+- The quantity selector is hidden on phones (quantity stays 1) and still shows on larger screens.
+- `catalog/*.json` are historical snapshots taken before the rename and activation. Handles and statuses in them are out of date.
 - The size-select event is wired to the variant picker's radio buttons and dropdown; the dropdown variant was not tested.

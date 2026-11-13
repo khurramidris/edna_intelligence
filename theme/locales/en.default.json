@@ -362,35 +362,20 @@
     "general": {
       "menu": "Menu",
       "home": "Home",
-      "collection": "The collection",
       "search": "Search",
       "bag": "Shopping bag",
       "close": "Close",
       "image_pending": "Photograph coming soon",
       "sold_out": "Sold out",
       "from": "From",
-      "view_collection": "Explore the collection",
       "footer": "Footer navigation",
       "privacy": "Privacy policy",
       "instagram": "Instagram",
       "back_top": "Back to top"
     },
-    "campaign": {
-      "shop": "Shop New Arrivals",
-      "discover": "Discover the first chapter",
-      "concept_alt": "EDNA campaign concept from the supplied brand identity board"
-    },
-    "signature": {
-      "concept_alt": "EDNA footwear detail concept from the brand identity board"
-    },
-    "stories": {
-      "explore": "Explore the edit",
-      "concept_alt": "EDNA editorial concept from the brand identity board"
-    },
     "editor": {
       "collection": "Select a collection with products. This tile stays hidden on the storefront until then.",
       "products": "Choose a collection of four to six real products. Product cards, PKR prices and wishlist controls appear automatically.",
-      "signature": "Select a real signature product and add its detail photograph and optional on-foot film.",
       "confidence": "Add approved fit, material, delivery and exchange information here. Customer stories appear only when you add real words and confirm consent."
     },
     "wishlist": {
@@ -409,25 +394,8 @@
       "consent": "By joining, you agree to receive EDNA emails. You can unsubscribe at any time."
     },
     "collection": {
-      "campaign_alt": "AI-generated EDNA campaign concept with a Pakistani model wearing ivory stilettos",
-      "explore": "Explore the collection",
-      "chapter": "THE FIRST CHAPTER",
-      "notice": "Collection study — AI-generated design imagery and proposed prices. Styles are not available to order.",
-      "no_results": "No styles match that search. Try a name, a silhouette or a different mood.",
-      "concept_image": "AI-generated design concept",
-      "view_style": "Explore {{ title }}",
-      "all_styles": "All styles",
-      "view_all": "Explore all 12 styles",
-      "view_edit": "Back to the edit",
-      "count": "styles in this selection",
-      "proposed_price": "Proposed price",
-      "size_study": "PROPOSED EU SIZE RANGE",
-      "product_note": "Design concept with an AI-generated image. Final materials, fit, sizing and availability are to be confirmed. Not available to order.",
-      "signature_alt": "AI-generated EDNA Orbit concept with a silver oval sculptural heel",
-      "discover_orbit": "Discover Orbit",
       "follow_story": "Follow the EDNA story",
-      "monogram_alt": "EDNA architectural monogram",
-      "house": "The house"
+      "monogram_alt": "EDNA architectural monogram"
     }
   }
 }
