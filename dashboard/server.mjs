@@ -56,7 +56,7 @@ http.createServer(async(req,res)=>{
 
     }
 
-    const files={'/':'index.html','/collector.mjs':'collector.mjs','/growth-ui.mjs':'growth-ui.mjs','/csv.mjs':'csv.mjs','/app.js':'app.js','/style.css':'style.css'};
+    const files={'/':'index.html','/collector.mjs':'collector.mjs','/growth-ui.mjs':'growth-ui.mjs','/demand-ui.mjs':'demand-ui.mjs','/csv.mjs':'csv.mjs','/app.js':'app.js','/style.css':'style.css'};
 
     const name=files[url.pathname];if(!name){res.writeHead(404);return res.end('Not found');}
 

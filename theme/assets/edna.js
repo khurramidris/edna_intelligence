@@ -71,7 +71,7 @@
     const heading = panel.querySelector('[data-edna-notify-heading]');
     if (heading) heading.textContent = (panel.dataset.heading || '').replace('{size}', title).trim();
     const tags = panel.querySelector('[data-edna-notify-tags]');
-    if (tags) tags.value = panel.dataset.baseTags + ',size-' + handleize(title);
+    if (tags) tags.value = panel.dataset.baseTags + ',size-' + handleize(title) + ',want:' + panel.dataset.handle + ':' + handleize(title);
     const link = panel.querySelector('[data-edna-notify-wa]');
     if (link && panel.dataset.waNumber) {
       const message = (panel.dataset.waMessage || '').replace('{product}', panel.dataset.product || '') + ' (' + title + ')';

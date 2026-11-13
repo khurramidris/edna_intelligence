@@ -39,4 +39,4 @@ How to verify: open a product URL with `?utm_source=test&utm_campaign=check`, ad
 
 ## Back-in-stock customers
 
-The back-in-stock form creates a Shopify customer with the tags `notify`, `notify-<product handle>` and `size-<size>`, for example `notify,notify-noor-satin-stiletto,size-eu-38`. Filter customers by those tags to see demand by design and size. The sign-up line tells the shopper they agree to receive EDNA emails.
+The back-in-stock form creates a Shopify customer with the tags `notify`, `notify-<product handle>`, `size-<size>` and `want:<product handle>:<size>`, for example `notify,notify-noor-satin-stiletto,size-eu-38,want:noor-satin-stiletto:eu-38`. The `want:` tag keeps a design and size together when one customer asks for several. The dashboard's Demand page reads these tags; see `dashboard/README.md`. The form is protected by Shopify's captcha, so it cannot be submitted by automated tests. The sign-up line tells the shopper they agree to receive EDNA emails.

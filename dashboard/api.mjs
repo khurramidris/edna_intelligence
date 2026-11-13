@@ -3,6 +3,7 @@ import {intelligence,ingestEvents} from './intelligence.mjs';
 import {bodyText,mutate,saveEvents} from './collection.mjs';
 import {syncOrders} from './shopify-sync.mjs';
 import {audiences,marketing} from './growth.mjs';
+import {demandReport,importSignups,syncDemand} from './demand.mjs';
 const json = (data,status=200) => new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 export async function api(request, storage, config={}) {
   const url = new URL(request.url);
@@ -13,12 +14,19 @@ export async function api(request, storage, config={}) {
     if(request.method==='GET'&&url.pathname==='/api/shopify/status'){
       const {data}=await storage.read();return json({configured:Boolean(config.env?.SHOPIFY_ADMIN_TOKEN&&config.env?.SHOPIFY_SHOP_DOMAIN),sync:data.shopifySync||null,records:Object.keys(data.shopifyOrders||{}).length});
     }
+    if(request.method==='POST'&&url.pathname==='/api/demand/sync')return json(await syncDemand(storage,config.env||{}));
+    if(request.method==='POST'&&url.pathname==='/api/demand/import'){
+      const input=JSON.parse(await bodyText(request,1000000));
+      await mutate(storage,state=>({data:importSignups(state,input.rows)}));
+      return json({saved:true});
+    }
     if(request.method==='POST'&&url.pathname==='/api/events/import'){
       const input=JSON.parse(await bodyText(request));
       const result=await saveEvents(storage,input.events);
       return json({accepted:result.accepted});
     }
     const current = await storage.read();
+    if(request.method==='GET'&&url.pathname==='/api/demand')return json(demandReport(current.data));
     if(request.method==='GET'&&url.pathname==='/api/audiences')return json(audiences(current.data));
     if(request.method==='GET'&&url.pathname==='/api/marketing')return json(marketing(current.data,url.searchParams.get('from'),url.searchParams.get('to')));
     if(request.method==='GET'&&url.pathname==='/api/intelligence'){

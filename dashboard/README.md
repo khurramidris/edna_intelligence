@@ -8,11 +8,22 @@ Customer segmentation, campaign cost reporting and CSV imports are now available
 
 New: Intelligence page, validated browser-event collection, consent-aware browser transport, signed Shopify order webhook receiver and duplicate/out-of-order protection. These are implemented interfaces awaiting activation, not installed storefront tracking. See [ACTIVATION.md](ACTIVATION.md) for exact capability boundaries and remaining work.
 
+- **Demand page:** back-in-stock requests by design and size, from the storefront's sign-up form. See [Demand](#demand).
 - Responsive overview, catalog search, editable product/packaging costs, order/COD ledger, integration status and import center.
 - Actual saved Shopify catalog and analytics evidence, with source dates. No invented orders or trends.
 - JSON imports with preview, whole-batch validation, ID-based replacement, concurrent-write checks and backup export.
 - Local persistence in `.data/state.json`; restarting preserves edits. Keep backups of this file.
 - Cloudflare Worker API and Supabase REST adapter with backend-only credentials and a restricted database table.
+
+## Demand
+
+The storefront's back-in-stock form tags each new customer `notify`, `notify-<design>`, `size-<size>` and `want:<design>:<size>`. The Demand page counts those tags by design, size and day.
+
+- **Privacy:** the pull asks Shopify only for the customer ID, creation time and tags. Names, emails and phone numbers are never requested or stored.
+- **Pull from Shopify** (`POST /api/demand/sync`) replaces the stored sign-ups with a fresh full copy, so running it twice changes nothing. It needs `SHOPIFY_SHOP_DOMAIN` and `SHOPIFY_ADMIN_TOKEN`, and the token needs the `read_customers` permission.
+- **No token yet?** In Shopify admin, export customers filtered by the tag `notify`, then post rows `{id, date, tags}` to `POST /api/demand/import` (numeric customer ID, `YYYY-MM-DD`, comma-separated tags). Emails are rejected as IDs.
+- **Reading it:** a request is not a sale and not a forecast. Dates are when the customer record was created. Older sign-ups that carry separate design and size tags are paired only when there is exactly one of each; the rest are counted and shown as unpaired.
+- Limits: 5,000 sign-up records in the local document. Bigger volumes need a table, as for orders.
 
 ## Data definitions
 
@@ -37,6 +48,6 @@ The database uses one versioned document for this initial small-store release. S
 
 ## Verification
 
-Run `npm ci` to install the development-only PostgreSQL test engine, then `npm test`. Twenty-three checks cover accounting, imports/CSV, segmentation, campaign spend, consent, webhook signatures, sync pagination/failures, retention and the actual SQL migration. Runtime still uses Node/Web APIs without production package dependencies.
+Run `npm ci` to install the development-only PostgreSQL test engine, then `npm test`. Thirty-three checks (ten of them for demand) cover accounting, imports/CSV, segmentation, campaign spend, consent, webhook signatures, sync pagination/failures, retention and the actual SQL migration. Runtime still uses Node/Web APIs without production package dependencies.
 
 Cloudflare routing follows https://developers.cloudflare.com/workers/static-assets/binding/ . Supabase backend API reference: https://supabase.com/docs/guides/api .

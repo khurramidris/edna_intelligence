@@ -9,7 +9,7 @@
   assign notify_tags = 'notify,notify-' | append: product.handle
   if size_label != blank
     assign size_handle = size_label | handleize
-    assign notify_tags = notify_tags | append: ',size-' | append: size_handle
+    assign notify_tags = notify_tags | append: ',size-' | append: size_handle | append: ',want:' | append: product.handle | append: ':' | append: size_handle
   endif
   assign heading_text = block.settings.heading | replace: '{size}', size_label | strip
   assign wa_text = block.settings.whatsapp_message | replace: '{product}', product.title
@@ -21,7 +21,7 @@
   [{%- for v in product.variants -%}{"t":{{ v.title | json }},"a":{{ v.available | json }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]
 {%- endcapture -%}
 {%- capture base_tags -%}notify,notify-{{ product.handle }}{%- endcapture -%}
-<div class="edna edna-notify" data-edna-notify data-variants="{{ variants_json | strip | escape }}" data-base-tags="{{ base_tags | escape }}" data-heading="{{ block.settings.heading | escape }}" data-product="{{ product.title | escape }}" data-wa-message="{{ block.settings.whatsapp_message | escape }}" data-wa-number="{{ digits }}"{% if variant.available %} hidden{% endif %} {{ block.shopify_attributes }}>
+<div class="edna edna-notify" data-edna-notify data-variants="{{ variants_json | strip | escape }}" data-base-tags="{{ base_tags | escape }}" data-handle="{{ product.handle | escape }}" data-heading="{{ block.settings.heading | escape }}" data-product="{{ product.title | escape }}" data-wa-message="{{ block.settings.whatsapp_message | escape }}" data-wa-number="{{ digits }}"{% if variant.available %} hidden{% endif %} {{ block.shopify_attributes }}>
   <h3 data-edna-notify-heading>{{ heading_text | escape }}</h3>
   <p>{{ block.settings.text | escape }}</p>
   {%- form 'customer', id: 'EdnaNotifyForm', class: 'edna-notify-form' -%}

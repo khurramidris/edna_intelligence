@@ -39,3 +39,11 @@ Source: [Shopify order API](https://shopify.dev/docs/api/admin-graphql/2026-10/q
 Browser events are untrusted observations. Origin allowlisting and rate limits reduce abuse; they do not authenticate browser payloads. Never use them alone for paid-order accounting, sales notifications or scarcity claims. Signed order records are stored separately from the manual remittance ledger, because Shopify payment status does not establish courier remittance.
 
 Sources: [Shopify standard events](https://shopify.dev/docs/api/web-pixels-api/standard-events), [pixel privacy](https://shopify.dev/docs/api/web-pixels-api/pixel-privacy), [webhook verification](https://shopify.dev/docs/apps/build/webhooks/verify-deliveries), [Cloudflare rate limits](https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/).
+
+## Demand pull (back-in-stock sign-ups)
+
+- `GET /api/demand`: authenticated report: totals, design by size, day by day, unpaired count.
+- `POST /api/demand/sync`: pulls customers tagged `notify` from Shopify (customer ID, creation time and tags only) and replaces the stored sign-ups. Needs a custom app token with `read_customers`; set it only in backend secret storage, like the order token.
+- `POST /api/demand/import`: the same result from rows exported out of Shopify, for use before a token exists.
+- Not verified against a real Shopify customer: whether a returning customer's new `want:` tag is added to the existing record when they use the form a second time. Test with a real browser (the form is protected by Shopify's captcha, so it cannot be exercised by automation) and look at the customer's tags. If tags are not added, repeat requesters are undercounted.
+- Automated checks use simulated pages; no live pull has run because no credential exists yet.
